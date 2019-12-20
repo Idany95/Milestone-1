@@ -84,13 +84,34 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/idan/CLionProjects/ex3/ex3.h">
+		<Unit filename="/home/idan/CLionProjects/ex3/commands/Command.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/idan/CLionProjects/ex3/interpreter">
+		<Unit filename="/home/idan/CLionProjects/ex3/commands/Commands.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/idan/CLionProjects/ex3/lexer">
+		<Unit filename="/home/idan/CLionProjects/ex3/commands/ConnectCommand.cpp">
+			<Option target="ex3"/>
+		</Unit>
+		<Unit filename="/home/idan/CLionProjects/ex3/commands/DefineVarCommand.cpp">
+			<Option target="ex3"/>
+		</Unit>
+		<Unit filename="/home/idan/CLionProjects/ex3/commands/OpenServerCommand.cpp">
+			<Option target="ex3"/>
+		</Unit>
+		<Unit filename="/home/idan/CLionProjects/ex3/interpreter/Expression.h">
+			<Option target="ex3"/>
+		</Unit>
+		<Unit filename="/home/idan/CLionProjects/ex3/interpreter/ex1.cpp">
+			<Option target="ex3"/>
+		</Unit>
+		<Unit filename="/home/idan/CLionProjects/ex3/interpreter/ex1.h">
+			<Option target="ex3"/>
+		</Unit>
+		<Unit filename="/home/idan/CLionProjects/ex3/lexer/Lexer.cpp">
+			<Option target="ex3"/>
+		</Unit>
+		<Unit filename="/home/idan/CLionProjects/ex3/lexer/Lexer.h">
 			<Option target="ex3"/>
 		</Unit>
 		<Unit filename="/home/idan/CLionProjects/ex3/main.cpp">

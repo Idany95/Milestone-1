@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/98/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/99/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/98/bin/cmake/linux/bin/cmake -E remove -f
+RM = /snap/clion/99/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/idan/CLionProjects/ex3/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/98/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/99/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/98/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/99/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -123,6 +123,168 @@ ex3/fast:
 	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/build
 .PHONY : ex3/fast
 
+commands/Command.o: commands/Command.cpp.o
+
+.PHONY : commands/Command.o
+
+# target to build an object file
+commands/Command.cpp.o:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/Command.cpp.o
+.PHONY : commands/Command.cpp.o
+
+commands/Command.i: commands/Command.cpp.i
+
+.PHONY : commands/Command.i
+
+# target to preprocess a source file
+commands/Command.cpp.i:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/Command.cpp.i
+.PHONY : commands/Command.cpp.i
+
+commands/Command.s: commands/Command.cpp.s
+
+.PHONY : commands/Command.s
+
+# target to generate assembly for a file
+commands/Command.cpp.s:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/Command.cpp.s
+.PHONY : commands/Command.cpp.s
+
+commands/ConnectCommand.o: commands/ConnectCommand.cpp.o
+
+.PHONY : commands/ConnectCommand.o
+
+# target to build an object file
+commands/ConnectCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/ConnectCommand.cpp.o
+.PHONY : commands/ConnectCommand.cpp.o
+
+commands/ConnectCommand.i: commands/ConnectCommand.cpp.i
+
+.PHONY : commands/ConnectCommand.i
+
+# target to preprocess a source file
+commands/ConnectCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/ConnectCommand.cpp.i
+.PHONY : commands/ConnectCommand.cpp.i
+
+commands/ConnectCommand.s: commands/ConnectCommand.cpp.s
+
+.PHONY : commands/ConnectCommand.s
+
+# target to generate assembly for a file
+commands/ConnectCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/ConnectCommand.cpp.s
+.PHONY : commands/ConnectCommand.cpp.s
+
+commands/DefineVarCommand.o: commands/DefineVarCommand.cpp.o
+
+.PHONY : commands/DefineVarCommand.o
+
+# target to build an object file
+commands/DefineVarCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/DefineVarCommand.cpp.o
+.PHONY : commands/DefineVarCommand.cpp.o
+
+commands/DefineVarCommand.i: commands/DefineVarCommand.cpp.i
+
+.PHONY : commands/DefineVarCommand.i
+
+# target to preprocess a source file
+commands/DefineVarCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/DefineVarCommand.cpp.i
+.PHONY : commands/DefineVarCommand.cpp.i
+
+commands/DefineVarCommand.s: commands/DefineVarCommand.cpp.s
+
+.PHONY : commands/DefineVarCommand.s
+
+# target to generate assembly for a file
+commands/DefineVarCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/DefineVarCommand.cpp.s
+.PHONY : commands/DefineVarCommand.cpp.s
+
+commands/OpenServerCommand.o: commands/OpenServerCommand.cpp.o
+
+.PHONY : commands/OpenServerCommand.o
+
+# target to build an object file
+commands/OpenServerCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.o
+.PHONY : commands/OpenServerCommand.cpp.o
+
+commands/OpenServerCommand.i: commands/OpenServerCommand.cpp.i
+
+.PHONY : commands/OpenServerCommand.i
+
+# target to preprocess a source file
+commands/OpenServerCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.i
+.PHONY : commands/OpenServerCommand.cpp.i
+
+commands/OpenServerCommand.s: commands/OpenServerCommand.cpp.s
+
+.PHONY : commands/OpenServerCommand.s
+
+# target to generate assembly for a file
+commands/OpenServerCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.s
+.PHONY : commands/OpenServerCommand.cpp.s
+
+interpreter/ex1.o: interpreter/ex1.cpp.o
+
+.PHONY : interpreter/ex1.o
+
+# target to build an object file
+interpreter/ex1.cpp.o:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/interpreter/ex1.cpp.o
+.PHONY : interpreter/ex1.cpp.o
+
+interpreter/ex1.i: interpreter/ex1.cpp.i
+
+.PHONY : interpreter/ex1.i
+
+# target to preprocess a source file
+interpreter/ex1.cpp.i:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/interpreter/ex1.cpp.i
+.PHONY : interpreter/ex1.cpp.i
+
+interpreter/ex1.s: interpreter/ex1.cpp.s
+
+.PHONY : interpreter/ex1.s
+
+# target to generate assembly for a file
+interpreter/ex1.cpp.s:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/interpreter/ex1.cpp.s
+.PHONY : interpreter/ex1.cpp.s
+
+lexer/Lexer.o: lexer/Lexer.cpp.o
+
+.PHONY : lexer/Lexer.o
+
+# target to build an object file
+lexer/Lexer.cpp.o:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/lexer/Lexer.cpp.o
+.PHONY : lexer/Lexer.cpp.o
+
+lexer/Lexer.i: lexer/Lexer.cpp.i
+
+.PHONY : lexer/Lexer.i
+
+# target to preprocess a source file
+lexer/Lexer.cpp.i:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/lexer/Lexer.cpp.i
+.PHONY : lexer/Lexer.cpp.i
+
+lexer/Lexer.s: lexer/Lexer.cpp.s
+
+.PHONY : lexer/Lexer.s
+
+# target to generate assembly for a file
+lexer/Lexer.cpp.s:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/lexer/Lexer.cpp.s
+.PHONY : lexer/Lexer.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +321,24 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... ex3"
 	@echo "... edit_cache"
+	@echo "... commands/Command.o"
+	@echo "... commands/Command.i"
+	@echo "... commands/Command.s"
+	@echo "... commands/ConnectCommand.o"
+	@echo "... commands/ConnectCommand.i"
+	@echo "... commands/ConnectCommand.s"
+	@echo "... commands/DefineVarCommand.o"
+	@echo "... commands/DefineVarCommand.i"
+	@echo "... commands/DefineVarCommand.s"
+	@echo "... commands/OpenServerCommand.o"
+	@echo "... commands/OpenServerCommand.i"
+	@echo "... commands/OpenServerCommand.s"
+	@echo "... interpreter/ex1.o"
+	@echo "... interpreter/ex1.i"
+	@echo "... interpreter/ex1.s"
+	@echo "... lexer/Lexer.o"
+	@echo "... lexer/Lexer.i"
+	@echo "... lexer/Lexer.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -6,15 +6,33 @@
 
 #IncludeRegexTransform: 
 
-/home/idan/CLionProjects/ex3/ex3.h
+/home/idan/CLionProjects/ex3/commands/Command.cpp
+Commands.h
+/home/idan/CLionProjects/ex3/commands/Commands.h
+../interpreter/ex1.h
+/home/idan/CLionProjects/ex3/interpreter/ex1.h
+
+/home/idan/CLionProjects/ex3/commands/Commands.h
 iostream
 -
 map
-/home/idan/CLionProjects/ex3/map
+/home/idan/CLionProjects/ex3/commands/map
 list
-/home/idan/CLionProjects/ex3/list
+/home/idan/CLionProjects/ex3/commands/list
 vector
-/home/idan/CLionProjects/ex3/vector
+/home/idan/CLionProjects/ex3/commands/vector
+
+/home/idan/CLionProjects/ex3/commands/ConnectCommand.cpp
+Commands.h
+/home/idan/CLionProjects/ex3/commands/Commands.h
+
+/home/idan/CLionProjects/ex3/commands/DefineVarCommand.cpp
+Commands.h
+/home/idan/CLionProjects/ex3/commands/Commands.h
+
+/home/idan/CLionProjects/ex3/commands/OpenServerCommand.cpp
+Commands.h
+/home/idan/CLionProjects/ex3/commands/Commands.h
 
 /home/idan/CLionProjects/ex3/interpreter/Expression.h
 
@@ -41,8 +59,8 @@ iostream
 -
 
 /home/idan/CLionProjects/ex3/main.cpp
-ex3.h
-/home/idan/CLionProjects/ex3/ex3.h
+commands/Commands.h
+/home/idan/CLionProjects/ex3/commands/Commands.h
 interpreter/ex1.h
 /home/idan/CLionProjects/ex3/interpreter/ex1.h
 lexer/Lexer.h
