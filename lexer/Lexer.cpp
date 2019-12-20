@@ -23,11 +23,11 @@ void Lexer::buildLexer() {
      */
     while (!this->build.empty()) {
         string line = this->build.front();
-        if (ifExists(line, "(")) {
+        if (ifExists(line, "(") && !ifExists(line,"=")) {
             delimiterOpenParentheses(line);
             continue;
         }
-        if (ifExists(line, ")")) {
+        if (ifExists(line, ")") && !ifExists(line,"=")) {
             delimiterCloseParentheses(line);
             continue;
         }
@@ -58,11 +58,12 @@ void Lexer::buildLexer() {
             this->build.remove(line);
         }
     }
-    /** CAN BE ADDED TO THE CODE JUST TO PRINT THE LEXER
+    /**
+    // CAN BE ADDED TO THE CODE JUST TO PRINT THE LEXER
     while (!this->lex.empty()) {
         cout << this->lex.front() << endl;
         this->lex.pop_front();
-    }*/
+    }**/
 }
 void Lexer::delimiterOpenParentheses(string s) {
     string delim = "(";
@@ -99,10 +100,21 @@ void Lexer::delimiterSpace(string s) {
     begin = s.substr(start, end);
     left = s.substr(end+1, s.length());
     this -> build.pop_front();
-    this -> build.push_front(begin);
-    this -> build.push_front(left);
-}
+    if (ifExists(left, "=")) {
+        auto startnew = 0U;
+        auto endnew = left.find(" ");
+        string beginnew = left.substr(startnew, endnew);
+        string leftnew = left.substr(endnew+1, s.length());
+        this->lex.push_front(leftnew);
+        this->lex.push_front(beginnew);
+        this->lex.push_front(begin);
+    }
+    else {
+        this -> build.push_front(begin);
+        this -> build.push_front(left);
 
+    }
+}
 void Lexer::delimiterComma(string s) {
     string delim = ",";
     string begin = "";
