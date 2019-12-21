@@ -6,37 +6,47 @@
 
 #IncludeRegexTransform: 
 
-/home/idan/CLionProjects/ex3/commands/Command.cpp
+/home/aaa/Documents/Milestone-1/commands/Command.cpp
 Commands.h
-/home/idan/CLionProjects/ex3/commands/Commands.h
+/home/aaa/Documents/Milestone-1/commands/Commands.h
 ../interpreter/ex1.h
-/home/idan/CLionProjects/ex3/interpreter/ex1.h
+/home/aaa/Documents/Milestone-1/interpreter/ex1.h
 
-/home/idan/CLionProjects/ex3/commands/Commands.h
+/home/aaa/Documents/Milestone-1/commands/Commands.h
 iostream
 -
 map
-/home/idan/CLionProjects/ex3/commands/map
+/home/aaa/Documents/Milestone-1/commands/map
 list
-/home/idan/CLionProjects/ex3/commands/list
+/home/aaa/Documents/Milestone-1/commands/list
 vector
-/home/idan/CLionProjects/ex3/commands/vector
+/home/aaa/Documents/Milestone-1/commands/vector
+thread
+-
+sys/socket.h
+-
+string
+-
+unistd.h
+-
+netinet/in.h
+-
 
-/home/idan/CLionProjects/ex3/commands/ConnectCommand.cpp
+/home/aaa/Documents/Milestone-1/commands/ConnectCommand.cpp
 Commands.h
-/home/idan/CLionProjects/ex3/commands/Commands.h
+/home/aaa/Documents/Milestone-1/commands/Commands.h
 
-/home/idan/CLionProjects/ex3/commands/DefineVarCommand.cpp
+/home/aaa/Documents/Milestone-1/commands/DefineVarCommand.cpp
 Commands.h
-/home/idan/CLionProjects/ex3/commands/Commands.h
+/home/aaa/Documents/Milestone-1/commands/Commands.h
 
-/home/idan/CLionProjects/ex3/commands/OpenServerCommand.cpp
+/home/aaa/Documents/Milestone-1/commands/OpenServerCommand.cpp
 Commands.h
-/home/idan/CLionProjects/ex3/commands/Commands.h
+/home/aaa/Documents/Milestone-1/commands/Commands.h
 
-/home/idan/CLionProjects/ex3/interpreter/Expression.h
+/home/aaa/Documents/Milestone-1/interpreter/Expression.h
 
-/home/idan/CLionProjects/ex3/interpreter/ex1.h
+/home/aaa/Documents/Milestone-1/interpreter/ex1.h
 string
 -
 stack
@@ -46,9 +56,9 @@ queue
 typeinfo
 -
 Expression.h
-/home/idan/CLionProjects/ex3/interpreter/Expression.h
+/home/aaa/Documents/Milestone-1/interpreter/Expression.h
 
-/home/idan/CLionProjects/ex3/lexer/Lexer.h
+/home/aaa/Documents/Milestone-1/lexer/Lexer.h
 list
 -
 string
@@ -58,11 +68,11 @@ fstream
 iostream
 -
 
-/home/idan/CLionProjects/ex3/main.cpp
+/home/aaa/Documents/Milestone-1/main.cpp
 commands/Commands.h
-/home/idan/CLionProjects/ex3/commands/Commands.h
+/home/aaa/Documents/Milestone-1/commands/Commands.h
 interpreter/ex1.h
-/home/idan/CLionProjects/ex3/interpreter/ex1.h
+/home/aaa/Documents/Milestone-1/interpreter/ex1.h
 lexer/Lexer.h
-/home/idan/CLionProjects/ex3/lexer/Lexer.h
+/home/aaa/Documents/Milestone-1/lexer/Lexer.h
 

@@ -1,2 +1,3 @@
 var magnetos -> sim("/controls/switches/magnetos")
 magnetos = 3+(82/12)
+openDataServer(5400)

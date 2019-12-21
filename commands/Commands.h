@@ -4,6 +4,13 @@
 #include "map"
 #include "list"
 #include "vector"
+#include <thread>
+#include <sys/socket.h>
+#include <string>
+#include <unistd.h>
+#include <netinet/in.h>
+
+
 //#include "commands/Command.h"
 using namespace std;
 

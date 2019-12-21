@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/idan/CLionProjects/ex3/commands/Command.cpp" "/home/idan/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/commands/Command.cpp.o"
-  "/home/idan/CLionProjects/ex3/commands/ConnectCommand.cpp" "/home/idan/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/commands/ConnectCommand.cpp.o"
-  "/home/idan/CLionProjects/ex3/commands/DefineVarCommand.cpp" "/home/idan/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/commands/DefineVarCommand.cpp.o"
-  "/home/idan/CLionProjects/ex3/commands/OpenServerCommand.cpp" "/home/idan/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.o"
-  "/home/idan/CLionProjects/ex3/interpreter/ex1.cpp" "/home/idan/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/interpreter/ex1.cpp.o"
-  "/home/idan/CLionProjects/ex3/lexer/Lexer.cpp" "/home/idan/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/lexer/Lexer.cpp.o"
-  "/home/idan/CLionProjects/ex3/main.cpp" "/home/idan/CLionProjects/ex3/cmake-build-debug/CMakeFiles/ex3.dir/main.cpp.o"
+  "/home/aaa/Documents/Milestone-1/commands/Command.cpp" "/home/aaa/Documents/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/commands/Command.cpp.o"
+  "/home/aaa/Documents/Milestone-1/commands/ConnectCommand.cpp" "/home/aaa/Documents/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/commands/ConnectCommand.cpp.o"
+  "/home/aaa/Documents/Milestone-1/commands/DefineVarCommand.cpp" "/home/aaa/Documents/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/commands/DefineVarCommand.cpp.o"
+  "/home/aaa/Documents/Milestone-1/commands/OpenServerCommand.cpp" "/home/aaa/Documents/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.o"
+  "/home/aaa/Documents/Milestone-1/interpreter/ex1.cpp" "/home/aaa/Documents/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/interpreter/ex1.cpp.o"
+  "/home/aaa/Documents/Milestone-1/lexer/Lexer.cpp" "/home/aaa/Documents/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/lexer/Lexer.cpp.o"
+  "/home/aaa/Documents/Milestone-1/main.cpp" "/home/aaa/Documents/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
