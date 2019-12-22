@@ -35,19 +35,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/aaa/Downloads/CLion-2019.2.5/clion-2019.2.5/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/99/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/aaa/Downloads/CLion-2019.2.5/clion-2019.2.5/bin/cmake/linux/bin/cmake -E remove -f
+RM = /snap/clion/99/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/aaa/Documents/Milestone-1
+CMAKE_SOURCE_DIR = /home/idan/CLionProjects/Milestone-1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/aaa/Documents/Milestone-1/cmake-build-debug
+CMAKE_BINARY_DIR = /home/idan/CLionProjects/Milestone-1/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -74,14 +74,14 @@ preinstall:
 CMakeFiles/ex3.dir/all:
 	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/depend
 	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/aaa/Documents/Milestone-1/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target ex3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/idan/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target ex3"
 .PHONY : CMakeFiles/ex3.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ex3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aaa/Documents/Milestone-1/cmake-build-debug/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/idan/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ex3.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/aaa/Documents/Milestone-1/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/idan/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ex3.dir/rule
 
 # Convenience name for target.

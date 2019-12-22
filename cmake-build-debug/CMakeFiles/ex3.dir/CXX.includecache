@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/aaa/Documents/Milestone-1/commands/Commands.h
+/home/idan/CLionProjects/Milestone-1/commands/Commands.h
 iostream
 -
 map
-/home/aaa/Documents/Milestone-1/commands/map
+/home/idan/CLionProjects/Milestone-1/commands/map
 list
-/home/aaa/Documents/Milestone-1/commands/list
+/home/idan/CLionProjects/Milestone-1/commands/list
 vector
-/home/aaa/Documents/Milestone-1/commands/vector
+/home/idan/CLionProjects/Milestone-1/commands/vector
 thread
 -
 sys/socket.h
@@ -30,7 +30,7 @@ arpa/inet.h
 cstring
 -
 
-/home/aaa/Documents/Milestone-1/commands/ConnectCommand.cpp
+/home/idan/CLionProjects/Milestone-1/commands/OpenServerCommand.cpp
 Commands.h
-/home/aaa/Documents/Milestone-1/commands/Commands.h
+/home/idan/CLionProjects/Milestone-1/commands/Commands.h
 

@@ -26,8 +26,9 @@ int openServer(int port) {
         std::cout<<"Server is now listening ..."<<std::endl;
     }
     // accepts a client
+    socklen_t addrlen = sizeof(sockaddr_in);
     int client_socket = accept(socketFD, (struct sockaddr *)&address,
-                               (socklen_t*)&address);
+                               &addrlen);
     if (client_socket == -1) {
         std::cerr<<"Error accepting client"<<std::endl;
         return -4;
@@ -40,9 +41,9 @@ int openServer(int port) {
         count++;
         int valread = read( client_socket , buffer, 1024);
         std::cout<<buffer<<std::endl;
-        if(count==2){
+        /**if(count==2){
             break;
-        }
+        }**/
     }
     return 0;
 }

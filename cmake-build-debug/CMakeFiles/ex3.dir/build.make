@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/aaa/Downloads/CLion-2019.2.5/clion-2019.2.5/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/99/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/aaa/Downloads/CLion-2019.2.5/clion-2019.2.5/bin/cmake/linux/bin/cmake -E remove -f
+RM = /snap/clion/99/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/aaa/Documents/Milestone-1
+CMAKE_SOURCE_DIR = /home/idan/CLionProjects/Milestone-1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/aaa/Documents/Milestone-1/cmake-build-debug
+CMAKE_BINARY_DIR = /home/idan/CLionProjects/Milestone-1/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ex3.dir/depend.make
@@ -59,94 +59,94 @@ include CMakeFiles/ex3.dir/flags.make
 
 CMakeFiles/ex3.dir/main.cpp.o: CMakeFiles/ex3.dir/flags.make
 CMakeFiles/ex3.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aaa/Documents/Milestone-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ex3.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex3.dir/main.cpp.o -c /home/aaa/Documents/Milestone-1/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/idan/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ex3.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex3.dir/main.cpp.o -c /home/idan/CLionProjects/Milestone-1/main.cpp
 
 CMakeFiles/ex3.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex3.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaa/Documents/Milestone-1/main.cpp > CMakeFiles/ex3.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/idan/CLionProjects/Milestone-1/main.cpp > CMakeFiles/ex3.dir/main.cpp.i
 
 CMakeFiles/ex3.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex3.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaa/Documents/Milestone-1/main.cpp -o CMakeFiles/ex3.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/idan/CLionProjects/Milestone-1/main.cpp -o CMakeFiles/ex3.dir/main.cpp.s
 
 CMakeFiles/ex3.dir/interpreter/ex1.cpp.o: CMakeFiles/ex3.dir/flags.make
 CMakeFiles/ex3.dir/interpreter/ex1.cpp.o: ../interpreter/ex1.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aaa/Documents/Milestone-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ex3.dir/interpreter/ex1.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex3.dir/interpreter/ex1.cpp.o -c /home/aaa/Documents/Milestone-1/interpreter/ex1.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/idan/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ex3.dir/interpreter/ex1.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex3.dir/interpreter/ex1.cpp.o -c /home/idan/CLionProjects/Milestone-1/interpreter/ex1.cpp
 
 CMakeFiles/ex3.dir/interpreter/ex1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex3.dir/interpreter/ex1.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaa/Documents/Milestone-1/interpreter/ex1.cpp > CMakeFiles/ex3.dir/interpreter/ex1.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/idan/CLionProjects/Milestone-1/interpreter/ex1.cpp > CMakeFiles/ex3.dir/interpreter/ex1.cpp.i
 
 CMakeFiles/ex3.dir/interpreter/ex1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex3.dir/interpreter/ex1.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaa/Documents/Milestone-1/interpreter/ex1.cpp -o CMakeFiles/ex3.dir/interpreter/ex1.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/idan/CLionProjects/Milestone-1/interpreter/ex1.cpp -o CMakeFiles/ex3.dir/interpreter/ex1.cpp.s
 
 CMakeFiles/ex3.dir/lexer/Lexer.cpp.o: CMakeFiles/ex3.dir/flags.make
 CMakeFiles/ex3.dir/lexer/Lexer.cpp.o: ../lexer/Lexer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aaa/Documents/Milestone-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ex3.dir/lexer/Lexer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex3.dir/lexer/Lexer.cpp.o -c /home/aaa/Documents/Milestone-1/lexer/Lexer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/idan/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ex3.dir/lexer/Lexer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex3.dir/lexer/Lexer.cpp.o -c /home/idan/CLionProjects/Milestone-1/lexer/Lexer.cpp
 
 CMakeFiles/ex3.dir/lexer/Lexer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex3.dir/lexer/Lexer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaa/Documents/Milestone-1/lexer/Lexer.cpp > CMakeFiles/ex3.dir/lexer/Lexer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/idan/CLionProjects/Milestone-1/lexer/Lexer.cpp > CMakeFiles/ex3.dir/lexer/Lexer.cpp.i
 
 CMakeFiles/ex3.dir/lexer/Lexer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex3.dir/lexer/Lexer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaa/Documents/Milestone-1/lexer/Lexer.cpp -o CMakeFiles/ex3.dir/lexer/Lexer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/idan/CLionProjects/Milestone-1/lexer/Lexer.cpp -o CMakeFiles/ex3.dir/lexer/Lexer.cpp.s
 
 CMakeFiles/ex3.dir/commands/Command.cpp.o: CMakeFiles/ex3.dir/flags.make
 CMakeFiles/ex3.dir/commands/Command.cpp.o: ../commands/Command.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aaa/Documents/Milestone-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ex3.dir/commands/Command.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex3.dir/commands/Command.cpp.o -c /home/aaa/Documents/Milestone-1/commands/Command.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/idan/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ex3.dir/commands/Command.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex3.dir/commands/Command.cpp.o -c /home/idan/CLionProjects/Milestone-1/commands/Command.cpp
 
 CMakeFiles/ex3.dir/commands/Command.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex3.dir/commands/Command.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaa/Documents/Milestone-1/commands/Command.cpp > CMakeFiles/ex3.dir/commands/Command.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/idan/CLionProjects/Milestone-1/commands/Command.cpp > CMakeFiles/ex3.dir/commands/Command.cpp.i
 
 CMakeFiles/ex3.dir/commands/Command.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex3.dir/commands/Command.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaa/Documents/Milestone-1/commands/Command.cpp -o CMakeFiles/ex3.dir/commands/Command.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/idan/CLionProjects/Milestone-1/commands/Command.cpp -o CMakeFiles/ex3.dir/commands/Command.cpp.s
 
 CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.o: CMakeFiles/ex3.dir/flags.make
 CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.o: ../commands/OpenServerCommand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aaa/Documents/Milestone-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.o -c /home/aaa/Documents/Milestone-1/commands/OpenServerCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/idan/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.o -c /home/idan/CLionProjects/Milestone-1/commands/OpenServerCommand.cpp
 
 CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaa/Documents/Milestone-1/commands/OpenServerCommand.cpp > CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/idan/CLionProjects/Milestone-1/commands/OpenServerCommand.cpp > CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.i
 
 CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaa/Documents/Milestone-1/commands/OpenServerCommand.cpp -o CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/idan/CLionProjects/Milestone-1/commands/OpenServerCommand.cpp -o CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.s
 
 CMakeFiles/ex3.dir/commands/ConnectCommand.cpp.o: CMakeFiles/ex3.dir/flags.make
 CMakeFiles/ex3.dir/commands/ConnectCommand.cpp.o: ../commands/ConnectCommand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aaa/Documents/Milestone-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ex3.dir/commands/ConnectCommand.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex3.dir/commands/ConnectCommand.cpp.o -c /home/aaa/Documents/Milestone-1/commands/ConnectCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/idan/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ex3.dir/commands/ConnectCommand.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex3.dir/commands/ConnectCommand.cpp.o -c /home/idan/CLionProjects/Milestone-1/commands/ConnectCommand.cpp
 
 CMakeFiles/ex3.dir/commands/ConnectCommand.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex3.dir/commands/ConnectCommand.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaa/Documents/Milestone-1/commands/ConnectCommand.cpp > CMakeFiles/ex3.dir/commands/ConnectCommand.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/idan/CLionProjects/Milestone-1/commands/ConnectCommand.cpp > CMakeFiles/ex3.dir/commands/ConnectCommand.cpp.i
 
 CMakeFiles/ex3.dir/commands/ConnectCommand.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex3.dir/commands/ConnectCommand.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaa/Documents/Milestone-1/commands/ConnectCommand.cpp -o CMakeFiles/ex3.dir/commands/ConnectCommand.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/idan/CLionProjects/Milestone-1/commands/ConnectCommand.cpp -o CMakeFiles/ex3.dir/commands/ConnectCommand.cpp.s
 
 CMakeFiles/ex3.dir/commands/DefineVarCommand.cpp.o: CMakeFiles/ex3.dir/flags.make
 CMakeFiles/ex3.dir/commands/DefineVarCommand.cpp.o: ../commands/DefineVarCommand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/aaa/Documents/Milestone-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ex3.dir/commands/DefineVarCommand.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex3.dir/commands/DefineVarCommand.cpp.o -c /home/aaa/Documents/Milestone-1/commands/DefineVarCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/idan/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ex3.dir/commands/DefineVarCommand.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ex3.dir/commands/DefineVarCommand.cpp.o -c /home/idan/CLionProjects/Milestone-1/commands/DefineVarCommand.cpp
 
 CMakeFiles/ex3.dir/commands/DefineVarCommand.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ex3.dir/commands/DefineVarCommand.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aaa/Documents/Milestone-1/commands/DefineVarCommand.cpp > CMakeFiles/ex3.dir/commands/DefineVarCommand.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/idan/CLionProjects/Milestone-1/commands/DefineVarCommand.cpp > CMakeFiles/ex3.dir/commands/DefineVarCommand.cpp.i
 
 CMakeFiles/ex3.dir/commands/DefineVarCommand.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ex3.dir/commands/DefineVarCommand.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aaa/Documents/Milestone-1/commands/DefineVarCommand.cpp -o CMakeFiles/ex3.dir/commands/DefineVarCommand.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/idan/CLionProjects/Milestone-1/commands/DefineVarCommand.cpp -o CMakeFiles/ex3.dir/commands/DefineVarCommand.cpp.s
 
 # Object files for target ex3
 ex3_OBJECTS = \
@@ -170,7 +170,7 @@ ex3: CMakeFiles/ex3.dir/commands/ConnectCommand.cpp.o
 ex3: CMakeFiles/ex3.dir/commands/DefineVarCommand.cpp.o
 ex3: CMakeFiles/ex3.dir/build.make
 ex3: CMakeFiles/ex3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/aaa/Documents/Milestone-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ex3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/idan/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ex3"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ex3.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -183,6 +183,6 @@ CMakeFiles/ex3.dir/clean:
 .PHONY : CMakeFiles/ex3.dir/clean
 
 CMakeFiles/ex3.dir/depend:
-	cd /home/aaa/Documents/Milestone-1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/aaa/Documents/Milestone-1 /home/aaa/Documents/Milestone-1 /home/aaa/Documents/Milestone-1/cmake-build-debug /home/aaa/Documents/Milestone-1/cmake-build-debug /home/aaa/Documents/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/idan/CLionProjects/Milestone-1/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/idan/CLionProjects/Milestone-1 /home/idan/CLionProjects/Milestone-1 /home/idan/CLionProjects/Milestone-1/cmake-build-debug /home/idan/CLionProjects/Milestone-1/cmake-build-debug /home/idan/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ex3.dir/depend
 
