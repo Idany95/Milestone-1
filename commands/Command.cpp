@@ -4,8 +4,8 @@
 
 void Command::parser(list<string> LexeredCommandsList) {
     //Initialize commands map
-    this->commandMap.insert({"OpenDataServer",new OpenServerCommand()});
-    this->commandMap.insert({"ConnectControlClient",new ConnectCommand()});
+    this->commandMap.insert({"openDataServer",new OpenServerCommand()});
+    this->commandMap.insert({"connectControlClient",new ConnectCommand()});
     this->commandMap.insert({"var",new DefineVarCommand()});
     //...ADD ALL COMMANDS
     list<string>::iterator it;

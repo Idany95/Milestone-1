@@ -9,7 +9,8 @@
 #include <string>
 #include <unistd.h>
 #include <netinet/in.h>
-
+#include <arpa/inet.h>
+#include <cstring>
 
 //#include "commands/Command.h"
 using namespace std;
