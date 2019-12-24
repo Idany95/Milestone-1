@@ -2,11 +2,12 @@
 #include "Commands.h"
 #include "../interpreter/ex1.h"
 
-void Command::parser(list<string> LexeredCommandsList) {
+void ParseCommand::parser(list<string> LexeredCommandsList) {
     //Initialize commands map
     this->commandMap.insert({"openDataServer",new OpenServerCommand()});
     this->commandMap.insert({"connectControlClient",new ConnectCommand()});
-    this->commandMap.insert({"var",new DefineVarCommand()});
+    this->commandMap.insert({"var",DefineVarCommand::getInstance()});
+    this->commandMap.insert({"if",new IfCommand()});
     //...ADD ALL COMMANDS
     list<string>::iterator it;
     for(it = LexeredCommandsList.begin(); it!=LexeredCommandsList.end(); ++it) {
@@ -22,13 +23,13 @@ void Command::parser(list<string> LexeredCommandsList) {
             }
             //current string isn't a commands but a variable, we'll update it
         } else {
-            DefineVarCommand* tempCommand = (DefineVarCommand*)(this->commandMap.find("var")->second);
-            string varName = *it;
-            string strValue = *(++(++it));
-            double value;
-            value = calculateValue(strValue);
-            //find varSymbolTable on "DefineVarCommand" and update variable's value
-            tempCommand->getVarSymbolTable().find(varName)->second->setValue(value);
+            Command* setVariable = new SetVariableCommand();
+            int i = setVariable->execute(it);
+            //move the iterator i steps forward
+            while (i > 0) {
+                it++;
+                i--;
+            }
         }
     }//end of for loop
 }
@@ -41,7 +42,7 @@ bool Command::checkIfNumber(string s) {
 };
 
 double Command::calculateValue(string strValue){
-    DefineVarCommand* tempCommand = (DefineVarCommand*)(this->commandMap.find("var")->second);
+    DefineVarCommand* tempCommand = (DefineVarCommand*)(ParseCommand::getInstance()->getMap().find("var")->second);
     vector <Var*> vars;
     Interpreter* i = new Interpreter();
     //inserting all Variables to a vector

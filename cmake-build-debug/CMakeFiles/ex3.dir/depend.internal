@@ -12,9 +12,23 @@ CMakeFiles/ex3.dir/commands/ConnectCommand.cpp.o
 CMakeFiles/ex3.dir/commands/DefineVarCommand.cpp.o
  /home/idan/CLionProjects/Milestone-1/commands/Commands.h
  /home/idan/CLionProjects/Milestone-1/commands/DefineVarCommand.cpp
+CMakeFiles/ex3.dir/commands/IfCommand.cpp.o
+ /home/idan/CLionProjects/Milestone-1/commands/Commands.h
+ /home/idan/CLionProjects/Milestone-1/commands/IfCommand.cpp
+ /home/idan/CLionProjects/Milestone-1/interpreter/Expression.h
+ /home/idan/CLionProjects/Milestone-1/interpreter/ex1.h
+CMakeFiles/ex3.dir/commands/LoopCommand.cpp.o
+ /home/idan/CLionProjects/Milestone-1/commands/LoopCommand.cpp
 CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.o
  /home/idan/CLionProjects/Milestone-1/commands/Commands.h
  /home/idan/CLionProjects/Milestone-1/commands/OpenServerCommand.cpp
+CMakeFiles/ex3.dir/commands/PrintCommand.cpp.o
+ /home/idan/CLionProjects/Milestone-1/commands/PrintCommand.cpp
+CMakeFiles/ex3.dir/commands/SetVariableCommand.cpp.o
+ /home/idan/CLionProjects/Milestone-1/commands/Commands.h
+ /home/idan/CLionProjects/Milestone-1/commands/SetVariableCommand.cpp
+CMakeFiles/ex3.dir/commands/SleepCommand.cpp.o
+ /home/idan/CLionProjects/Milestone-1/commands/SleepCommand.cpp
 CMakeFiles/ex3.dir/interpreter/ex1.cpp.o
  /home/idan/CLionProjects/Milestone-1/interpreter/Expression.h
  /home/idan/CLionProjects/Milestone-1/interpreter/ex1.cpp

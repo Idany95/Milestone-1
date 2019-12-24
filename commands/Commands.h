@@ -11,8 +11,6 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <cstring>
-
-//#include "commands/Command.h"
 using namespace std;
 
 class Variable {
@@ -27,18 +25,28 @@ public:
 };
 
 class Command {
-protected:
-    map <string,Command*> commandMap;
 public:
     virtual int execute(list<string>::iterator it) = 0;
-    void parser(list<string> LexeredCommandsList);
     virtual ~Command() = default;
     bool checkIfNumber(string s);
     double calculateValue(string s);
 };
 
 class ParseCommand: public Command {
+private:
+    map <string,Command*> commandMap;
+    ParseCommand(){};
+public:
+    //SINGLETON
+    static ParseCommand *getInstance() {
+        static ParseCommand c;
+        return &c;
+    }
     int execute(list<string>::iterator it);
+    void parser(list<string> LexeredCommandsList);
+    map <string,Command*> getMap() {
+        return this->commandMap;
+    };
 };
 
 class OpenServerCommand: public Command {
@@ -53,8 +61,24 @@ class DefineVarCommand: public Command {
 private:
     map <string,Variable*> varSymbolTable;
     map <string,Variable*> simSymbolTable;
+    DefineVarCommand(){};
+    static DefineVarCommand *theInstance;
 public:
+    //SINGELTON
+    static DefineVarCommand *getInstance(){
+            static DefineVarCommand c;
+            return &c;
+        /**if(theInstance == nullptr) {
+            return new DefineVarCommand();
+        }
+        return theInstance;**/
+    }
     map <string,Variable*> getVarSymbolTable();
+    int execute(list<string>::iterator it);
+};
+
+class SetVariableCommand: public Command {
+public:
     int execute(list<string>::iterator it);
 };
 
@@ -63,7 +87,9 @@ protected:
     list<Command*> CommandList;
     int commandCounter;
 public:
-    int execute(list<string>::iterator it);
+    int execute(list<string>::iterator it){
+        return 0;
+    };
 };
 class IfCommand: public ConditionParser {
     int execute(list<string>::iterator it);

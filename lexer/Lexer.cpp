@@ -35,7 +35,7 @@ void Lexer::buildLexer() {
             delimiterComma(line);
             continue;
         }
-        if (ifExists(line, " ")) {
+        if (ifExists(line, " ") && !ifExists(line, "\t")) {
             delimiterSpace(line);
             continue;
         }
@@ -47,6 +47,10 @@ void Lexer::buildLexer() {
         // because we push <- to lex and we dont want to tuch it
         if (ifExists(line, "<-") && !line.compare("<-")==0) {
             delimiterArrowLeft(line);
+            continue;
+        }
+        if (ifExists(line, "\t")) {
+            delimiterTab(line);
             continue;
         }
         // the empty string has no delimiters but we shouldn't put it in the lexer
@@ -63,7 +67,7 @@ void Lexer::buildLexer() {
     while (!this->lex.empty()) {
         cout << this->lex.front() << endl;
         this->lex.pop_front();
-    }**/
+    }*/
 }
 void Lexer::delimiterOpenParentheses(string s) {
     string delim = "(";
@@ -77,7 +81,12 @@ void Lexer::delimiterOpenParentheses(string s) {
     this -> build.push_front(begin);
     this -> build.push_front(left);
 }
-
+void Lexer::delimiterTab(string s) {
+    string left = "";
+    left = s.substr(1);
+    this -> build.pop_front();
+    this->build.push_front(left);
+}
 void Lexer::delimiterCloseParentheses(string s) {
     string delim = ")";
     string begin = "";

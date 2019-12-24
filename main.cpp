@@ -3,9 +3,8 @@
 #include "lexer/Lexer.h"
 
 int main(){
-    Command* c = new ParseCommand();
     Lexer* l = new Lexer();
     l->buildLexer();
-    c->parser(l->getList());
+    ParseCommand::getInstance()->parser(l->getList());
     return 0;
 }

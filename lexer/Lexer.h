@@ -4,6 +4,7 @@
 #include <string>
 #include <fstream>
 #include <iostream>
+#include <algorithm>
 using namespace std;
 class Lexer {
 private:
@@ -19,6 +20,7 @@ public :
     void delimiterComma(string s);
     void delimiterArrowRight(string s);
     void delimiterArrowLeft(string s);
+    void delimiterTab(string s);
     bool ifExists(string c, string s);
     list<string> getList();
 };
