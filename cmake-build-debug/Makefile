@@ -204,6 +204,33 @@ commands/DefineVarCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/DefineVarCommand.cpp.s
 .PHONY : commands/DefineVarCommand.cpp.s
 
+commands/IfCommand.o: commands/IfCommand.cpp.o
+
+.PHONY : commands/IfCommand.o
+
+# target to build an object file
+commands/IfCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/IfCommand.cpp.o
+.PHONY : commands/IfCommand.cpp.o
+
+commands/IfCommand.i: commands/IfCommand.cpp.i
+
+.PHONY : commands/IfCommand.i
+
+# target to preprocess a source file
+commands/IfCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/IfCommand.cpp.i
+.PHONY : commands/IfCommand.cpp.i
+
+commands/IfCommand.s: commands/IfCommand.cpp.s
+
+.PHONY : commands/IfCommand.s
+
+# target to generate assembly for a file
+commands/IfCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/IfCommand.cpp.s
+.PHONY : commands/IfCommand.cpp.s
+
 commands/OpenServerCommand.o: commands/OpenServerCommand.cpp.o
 
 .PHONY : commands/OpenServerCommand.o
@@ -230,6 +257,87 @@ commands/OpenServerCommand.s: commands/OpenServerCommand.cpp.s
 commands/OpenServerCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.s
 .PHONY : commands/OpenServerCommand.cpp.s
+
+commands/PrintCommand.o: commands/PrintCommand.cpp.o
+
+.PHONY : commands/PrintCommand.o
+
+# target to build an object file
+commands/PrintCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/PrintCommand.cpp.o
+.PHONY : commands/PrintCommand.cpp.o
+
+commands/PrintCommand.i: commands/PrintCommand.cpp.i
+
+.PHONY : commands/PrintCommand.i
+
+# target to preprocess a source file
+commands/PrintCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/PrintCommand.cpp.i
+.PHONY : commands/PrintCommand.cpp.i
+
+commands/PrintCommand.s: commands/PrintCommand.cpp.s
+
+.PHONY : commands/PrintCommand.s
+
+# target to generate assembly for a file
+commands/PrintCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/PrintCommand.cpp.s
+.PHONY : commands/PrintCommand.cpp.s
+
+commands/SleepCommand.o: commands/SleepCommand.cpp.o
+
+.PHONY : commands/SleepCommand.o
+
+# target to build an object file
+commands/SleepCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/SleepCommand.cpp.o
+.PHONY : commands/SleepCommand.cpp.o
+
+commands/SleepCommand.i: commands/SleepCommand.cpp.i
+
+.PHONY : commands/SleepCommand.i
+
+# target to preprocess a source file
+commands/SleepCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/SleepCommand.cpp.i
+.PHONY : commands/SleepCommand.cpp.i
+
+commands/SleepCommand.s: commands/SleepCommand.cpp.s
+
+.PHONY : commands/SleepCommand.s
+
+# target to generate assembly for a file
+commands/SleepCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/SleepCommand.cpp.s
+.PHONY : commands/SleepCommand.cpp.s
+
+commands/WhileCommand.o: commands/WhileCommand.cpp.o
+
+.PHONY : commands/WhileCommand.o
+
+# target to build an object file
+commands/WhileCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/WhileCommand.cpp.o
+.PHONY : commands/WhileCommand.cpp.o
+
+commands/WhileCommand.i: commands/WhileCommand.cpp.i
+
+.PHONY : commands/WhileCommand.i
+
+# target to preprocess a source file
+commands/WhileCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/WhileCommand.cpp.i
+.PHONY : commands/WhileCommand.cpp.i
+
+commands/WhileCommand.s: commands/WhileCommand.cpp.s
+
+.PHONY : commands/WhileCommand.s
+
+# target to generate assembly for a file
+commands/WhileCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/WhileCommand.cpp.s
+.PHONY : commands/WhileCommand.cpp.s
 
 interpreter/ex1.o: interpreter/ex1.cpp.o
 
@@ -330,9 +438,21 @@ help:
 	@echo "... commands/DefineVarCommand.o"
 	@echo "... commands/DefineVarCommand.i"
 	@echo "... commands/DefineVarCommand.s"
+	@echo "... commands/IfCommand.o"
+	@echo "... commands/IfCommand.i"
+	@echo "... commands/IfCommand.s"
 	@echo "... commands/OpenServerCommand.o"
 	@echo "... commands/OpenServerCommand.i"
 	@echo "... commands/OpenServerCommand.s"
+	@echo "... commands/PrintCommand.o"
+	@echo "... commands/PrintCommand.i"
+	@echo "... commands/PrintCommand.s"
+	@echo "... commands/SleepCommand.o"
+	@echo "... commands/SleepCommand.i"
+	@echo "... commands/SleepCommand.s"
+	@echo "... commands/WhileCommand.o"
+	@echo "... commands/WhileCommand.i"
+	@echo "... commands/WhileCommand.s"
 	@echo "... interpreter/ex1.o"
 	@echo "... interpreter/ex1.i"
 	@echo "... interpreter/ex1.s"

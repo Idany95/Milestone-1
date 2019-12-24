@@ -96,7 +96,19 @@
 		<Unit filename="/home/idan/CLionProjects/Milestone-1/commands/DefineVarCommand.cpp">
 			<Option target="ex3"/>
 		</Unit>
+		<Unit filename="/home/idan/CLionProjects/Milestone-1/commands/IfCommand.cpp">
+			<Option target="ex3"/>
+		</Unit>
 		<Unit filename="/home/idan/CLionProjects/Milestone-1/commands/OpenServerCommand.cpp">
+			<Option target="ex3"/>
+		</Unit>
+		<Unit filename="/home/idan/CLionProjects/Milestone-1/commands/PrintCommand.cpp">
+			<Option target="ex3"/>
+		</Unit>
+		<Unit filename="/home/idan/CLionProjects/Milestone-1/commands/SleepCommand.cpp">
+			<Option target="ex3"/>
+		</Unit>
+		<Unit filename="/home/idan/CLionProjects/Milestone-1/commands/WhileCommand.cpp">
 			<Option target="ex3"/>
 		</Unit>
 		<Unit filename="/home/idan/CLionProjects/Milestone-1/interpreter/Expression.h">
