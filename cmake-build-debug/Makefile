@@ -231,6 +231,33 @@ commands/IfCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/IfCommand.cpp.s
 .PHONY : commands/IfCommand.cpp.s
 
+commands/LoopCommand.o: commands/LoopCommand.cpp.o
+
+.PHONY : commands/LoopCommand.o
+
+# target to build an object file
+commands/LoopCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/LoopCommand.cpp.o
+.PHONY : commands/LoopCommand.cpp.o
+
+commands/LoopCommand.i: commands/LoopCommand.cpp.i
+
+.PHONY : commands/LoopCommand.i
+
+# target to preprocess a source file
+commands/LoopCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/LoopCommand.cpp.i
+.PHONY : commands/LoopCommand.cpp.i
+
+commands/LoopCommand.s: commands/LoopCommand.cpp.s
+
+.PHONY : commands/LoopCommand.s
+
+# target to generate assembly for a file
+commands/LoopCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/LoopCommand.cpp.s
+.PHONY : commands/LoopCommand.cpp.s
+
 commands/OpenServerCommand.o: commands/OpenServerCommand.cpp.o
 
 .PHONY : commands/OpenServerCommand.o
@@ -285,6 +312,33 @@ commands/PrintCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/PrintCommand.cpp.s
 .PHONY : commands/PrintCommand.cpp.s
 
+commands/SetVariableCommand.o: commands/SetVariableCommand.cpp.o
+
+.PHONY : commands/SetVariableCommand.o
+
+# target to build an object file
+commands/SetVariableCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/SetVariableCommand.cpp.o
+.PHONY : commands/SetVariableCommand.cpp.o
+
+commands/SetVariableCommand.i: commands/SetVariableCommand.cpp.i
+
+.PHONY : commands/SetVariableCommand.i
+
+# target to preprocess a source file
+commands/SetVariableCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/SetVariableCommand.cpp.i
+.PHONY : commands/SetVariableCommand.cpp.i
+
+commands/SetVariableCommand.s: commands/SetVariableCommand.cpp.s
+
+.PHONY : commands/SetVariableCommand.s
+
+# target to generate assembly for a file
+commands/SetVariableCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/SetVariableCommand.cpp.s
+.PHONY : commands/SetVariableCommand.cpp.s
+
 commands/SleepCommand.o: commands/SleepCommand.cpp.o
 
 .PHONY : commands/SleepCommand.o
@@ -311,33 +365,6 @@ commands/SleepCommand.s: commands/SleepCommand.cpp.s
 commands/SleepCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/SleepCommand.cpp.s
 .PHONY : commands/SleepCommand.cpp.s
-
-commands/WhileCommand.o: commands/WhileCommand.cpp.o
-
-.PHONY : commands/WhileCommand.o
-
-# target to build an object file
-commands/WhileCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/WhileCommand.cpp.o
-.PHONY : commands/WhileCommand.cpp.o
-
-commands/WhileCommand.i: commands/WhileCommand.cpp.i
-
-.PHONY : commands/WhileCommand.i
-
-# target to preprocess a source file
-commands/WhileCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/WhileCommand.cpp.i
-.PHONY : commands/WhileCommand.cpp.i
-
-commands/WhileCommand.s: commands/WhileCommand.cpp.s
-
-.PHONY : commands/WhileCommand.s
-
-# target to generate assembly for a file
-commands/WhileCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/ex3.dir/build.make CMakeFiles/ex3.dir/commands/WhileCommand.cpp.s
-.PHONY : commands/WhileCommand.cpp.s
 
 interpreter/ex1.o: interpreter/ex1.cpp.o
 
@@ -441,18 +468,21 @@ help:
 	@echo "... commands/IfCommand.o"
 	@echo "... commands/IfCommand.i"
 	@echo "... commands/IfCommand.s"
+	@echo "... commands/LoopCommand.o"
+	@echo "... commands/LoopCommand.i"
+	@echo "... commands/LoopCommand.s"
 	@echo "... commands/OpenServerCommand.o"
 	@echo "... commands/OpenServerCommand.i"
 	@echo "... commands/OpenServerCommand.s"
 	@echo "... commands/PrintCommand.o"
 	@echo "... commands/PrintCommand.i"
 	@echo "... commands/PrintCommand.s"
+	@echo "... commands/SetVariableCommand.o"
+	@echo "... commands/SetVariableCommand.i"
+	@echo "... commands/SetVariableCommand.s"
 	@echo "... commands/SleepCommand.o"
 	@echo "... commands/SleepCommand.i"
 	@echo "... commands/SleepCommand.s"
-	@echo "... commands/WhileCommand.o"
-	@echo "... commands/WhileCommand.i"
-	@echo "... commands/WhileCommand.s"
 	@echo "... interpreter/ex1.o"
 	@echo "... interpreter/ex1.i"
 	@echo "... interpreter/ex1.s"

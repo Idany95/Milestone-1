@@ -57,4 +57,15 @@ public:
     map <string,Variable*> getVarSymbolTable();
     int execute(list<string>::iterator it);
 };
+
+class ConditionParser: public Command {
+protected:
+    list<Command*> CommandList;
+    int commandCounter;
+public:
+    int execute(list<string>::iterator it);
+};
+class IfCommand: public ConditionParser {
+    int execute(list<string>::iterator it);
+};
 #endif //EX3_COMMANDS_H
