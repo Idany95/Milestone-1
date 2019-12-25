@@ -11,6 +11,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <cstring>
+using namespace std::chrono_literals;
 using namespace std;
 
 class Variable {
@@ -92,6 +93,12 @@ public:
     };
 };
 class IfCommand: public ConditionParser {
+    int execute(list<string>::iterator it);
+};
+class PrintCommand: public Command {
+    int execute(list<string>::iterator it);
+};
+class SleepCommand: public Command {
     int execute(list<string>::iterator it);
 };
 #endif //EX3_COMMANDS_H

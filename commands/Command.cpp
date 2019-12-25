@@ -8,6 +8,8 @@ void ParseCommand::parser(list<string> LexeredCommandsList) {
     this->commandMap.insert({"connectControlClient",new ConnectCommand()});
     this->commandMap.insert({"var",DefineVarCommand::getInstance()});
     this->commandMap.insert({"if",new IfCommand()});
+    this->commandMap.insert({"Print", new PrintCommand()});
+    this->commandMap.insert({"Sleep", new SleepCommand()});
     //...ADD ALL COMMANDS
     list<string>::iterator it;
     for(it = LexeredCommandsList.begin(); it!=LexeredCommandsList.end(); ++it) {
