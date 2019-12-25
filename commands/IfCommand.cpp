@@ -43,8 +43,7 @@ int IfCommand::execute(list<string>::iterator it) {
         ++it;
         while(*it != "}") {
             //if current string is a commands
-            //P R O B L E M - need to fix
-            if (ParseCommand::getInstance()->getMap().find(*it) != ParseCommand::getInstance()->getMap().end()) {
+            if (ParseCommand::getInstance()->getMap().find(*it) == ParseCommand::getInstance()->getMap().end()) {
                 Command* tempC = nullptr;
                 tempC = ParseCommand::getInstance()->getMap().find(*it)->second;
                 int i = tempC->execute(++it);
@@ -52,6 +51,7 @@ int IfCommand::execute(list<string>::iterator it) {
                 while (i > 0) {
                     it++;
                     i--;
+                    commandCounter++;
                 }
                 //current string isn't a commands but a variable, we'll update it
             } else {
@@ -61,11 +61,12 @@ int IfCommand::execute(list<string>::iterator it) {
                 while (i > 0) {
                     it++;
                     i--;
+                    commandCounter++;
                 }
             }
+            ++it;
+            commandCounter++;
         }
-        ++it;
-        commandCounter++;
     }
     if (!ifCorrect) {
         while (*it != "}") {
@@ -73,5 +74,5 @@ int IfCommand::execute(list<string>::iterator it) {
             commandCounter++;
         }
     }
-    return commandCounter + 3;
+    return commandCounter + 4;
 }
