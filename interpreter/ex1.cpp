@@ -171,6 +171,7 @@ void Interpreter::oldSetVariables(string arr) {
 }
 
 Expression* Interpreter::interpret(string arr) {
+    arr.erase(remove(arr.begin(), arr.end(), ' '), arr.end());
     queue <string> q;
     stack <char> s;
     int i = 0, length = 0;

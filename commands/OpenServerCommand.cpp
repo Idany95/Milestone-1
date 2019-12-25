@@ -49,7 +49,7 @@ int openServer(int port) {
 }
 int OpenServerCommand::execute(list<string>::iterator it) {
     string port = *it;
-    thread server_thread(openServer, stoi(port));
+    thread server_thread(openServer, calculateValue(port));
     server_thread.join();
     return 1;
 }

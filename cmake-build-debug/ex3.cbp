@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/idan/CLionProjects/Milestone-1/cmake-build-debug"/>
+				<Option working_dir="/home/aaa/CLionProjects/Milestone-1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/idan/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/idan/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/idan/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/idan/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/idan/CLionProjects/Milestone-1/cmake-build-debug"/>
+				<Option working_dir="/home/aaa/CLionProjects/Milestone-1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/idan/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/idan/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/idan/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/idan/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ex3">
-				<Option output="/home/idan/CLionProjects/Milestone-1/cmake-build-debug/ex3" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/idan/CLionProjects/Milestone-1/cmake-build-debug"/>
+				<Option output="/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/ex3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/aaa/CLionProjects/Milestone-1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -44,15 +44,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/idan/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex3"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/idan/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/idan/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/idan/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex3"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ex3/fast">
-				<Option output="/home/idan/CLionProjects/Milestone-1/cmake-build-debug/ex3" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/idan/CLionProjects/Milestone-1/cmake-build-debug"/>
+				<Option output="/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/ex3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/aaa/CLionProjects/Milestone-1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -67,72 +67,72 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/idan/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex3/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/idan/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/idan/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/idan/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 ex3/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/idan/CLionProjects/Milestone-1/cmake-build-debug"/>
+				<Option working_dir="/home/aaa/CLionProjects/Milestone-1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/idan/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/idan/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/idan/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/idan/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/idan/CLionProjects/Milestone-1/commands/Command.cpp">
+		<Unit filename="/home/aaa/CLionProjects/Milestone-1/commands/Command.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/idan/CLionProjects/Milestone-1/commands/Commands.h">
+		<Unit filename="/home/aaa/CLionProjects/Milestone-1/commands/Commands.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/idan/CLionProjects/Milestone-1/commands/ConnectCommand.cpp">
+		<Unit filename="/home/aaa/CLionProjects/Milestone-1/commands/ConnectCommand.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/idan/CLionProjects/Milestone-1/commands/DefineVarCommand.cpp">
+		<Unit filename="/home/aaa/CLionProjects/Milestone-1/commands/DefineVarCommand.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/idan/CLionProjects/Milestone-1/commands/IfCommand.cpp">
+		<Unit filename="/home/aaa/CLionProjects/Milestone-1/commands/IfCommand.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/idan/CLionProjects/Milestone-1/commands/LoopCommand.cpp">
+		<Unit filename="/home/aaa/CLionProjects/Milestone-1/commands/LoopCommand.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/idan/CLionProjects/Milestone-1/commands/OpenServerCommand.cpp">
+		<Unit filename="/home/aaa/CLionProjects/Milestone-1/commands/OpenServerCommand.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/idan/CLionProjects/Milestone-1/commands/PrintCommand.cpp">
+		<Unit filename="/home/aaa/CLionProjects/Milestone-1/commands/PrintCommand.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/idan/CLionProjects/Milestone-1/commands/SetVariableCommand.cpp">
+		<Unit filename="/home/aaa/CLionProjects/Milestone-1/commands/SetVariableCommand.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/idan/CLionProjects/Milestone-1/commands/SleepCommand.cpp">
+		<Unit filename="/home/aaa/CLionProjects/Milestone-1/commands/SleepCommand.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/idan/CLionProjects/Milestone-1/interpreter/Expression.h">
+		<Unit filename="/home/aaa/CLionProjects/Milestone-1/interpreter/Expression.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/idan/CLionProjects/Milestone-1/interpreter/ex1.cpp">
+		<Unit filename="/home/aaa/CLionProjects/Milestone-1/interpreter/ex1.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/idan/CLionProjects/Milestone-1/interpreter/ex1.h">
+		<Unit filename="/home/aaa/CLionProjects/Milestone-1/interpreter/ex1.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/idan/CLionProjects/Milestone-1/lexer/Lexer.cpp">
+		<Unit filename="/home/aaa/CLionProjects/Milestone-1/lexer/Lexer.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/idan/CLionProjects/Milestone-1/lexer/Lexer.h">
+		<Unit filename="/home/aaa/CLionProjects/Milestone-1/lexer/Lexer.h">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/idan/CLionProjects/Milestone-1/main.cpp">
+		<Unit filename="/home/aaa/CLionProjects/Milestone-1/main.cpp">
 			<Option target="ex3"/>
 		</Unit>
-		<Unit filename="/home/idan/CLionProjects/Milestone-1/CMakeLists.txt">
+		<Unit filename="/home/aaa/CLionProjects/Milestone-1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

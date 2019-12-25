@@ -17,7 +17,10 @@ CMakeFiles/ex3.dir/commands/IfCommand.cpp.o: ../commands/IfCommand.cpp
 CMakeFiles/ex3.dir/commands/IfCommand.cpp.o: ../interpreter/Expression.h
 CMakeFiles/ex3.dir/commands/IfCommand.cpp.o: ../interpreter/ex1.h
 
+CMakeFiles/ex3.dir/commands/LoopCommand.cpp.o: ../commands/Commands.h
 CMakeFiles/ex3.dir/commands/LoopCommand.cpp.o: ../commands/LoopCommand.cpp
+CMakeFiles/ex3.dir/commands/LoopCommand.cpp.o: ../interpreter/Expression.h
+CMakeFiles/ex3.dir/commands/LoopCommand.cpp.o: ../interpreter/ex1.h
 
 CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.o: ../commands/Commands.h
 CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.o: ../commands/OpenServerCommand.cpp

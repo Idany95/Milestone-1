@@ -6,6 +6,7 @@
 #include <queue>
 #include <typeinfo>
 #include "Expression.h"
+#include <algorithm>
 class BinaryOperator: public Expression {
 protected:
     Expression* right;

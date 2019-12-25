@@ -94,4 +94,10 @@ public:
 class IfCommand: public ConditionParser {
     int execute(list<string>::iterator it);
 };
+class LoopCommand: public ConditionParser {
+protected:
+    int commandCounter;
+    int execute(list<string>::iterator it);
+    bool condition(string var1, string con, string var2);
+};
 #endif //EX3_COMMANDS_H

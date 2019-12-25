@@ -35,7 +35,7 @@ void Lexer::buildLexer() {
             delimiterComma(line);
             continue;
         }
-        if (ifExists(line, " ") && !ifExists(line, "\t")) {
+        if (ifExists(line, " ") && !ifExists(line, "\t") && !ifExists(line, "\"")) {
             delimiterSpace(line);
             continue;
         }
