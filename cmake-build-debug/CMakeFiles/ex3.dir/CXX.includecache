@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/aaa/CLionProjects/Milestone-1/commands/Command.cpp
+Commands.h
+/home/aaa/CLionProjects/Milestone-1/commands/Commands.h
+../interpreter/ex1.h
+/home/aaa/CLionProjects/Milestone-1/interpreter/ex1.h
+
 /home/aaa/CLionProjects/Milestone-1/commands/Commands.h
 iostream
 -
@@ -30,11 +36,41 @@ arpa/inet.h
 cstring
 -
 
+/home/aaa/CLionProjects/Milestone-1/commands/ConnectCommand.cpp
+Commands.h
+/home/aaa/CLionProjects/Milestone-1/commands/Commands.h
+
+/home/aaa/CLionProjects/Milestone-1/commands/DefineVarCommand.cpp
+Commands.h
+/home/aaa/CLionProjects/Milestone-1/commands/Commands.h
+
+/home/aaa/CLionProjects/Milestone-1/commands/IfCommand.cpp
+Commands.h
+/home/aaa/CLionProjects/Milestone-1/commands/Commands.h
+../interpreter/ex1.h
+/home/aaa/CLionProjects/Milestone-1/interpreter/ex1.h
+
 /home/aaa/CLionProjects/Milestone-1/commands/LoopCommand.cpp
 Commands.h
 /home/aaa/CLionProjects/Milestone-1/commands/Commands.h
 ../interpreter/ex1.h
 /home/aaa/CLionProjects/Milestone-1/interpreter/ex1.h
+
+/home/aaa/CLionProjects/Milestone-1/commands/OpenServerCommand.cpp
+Commands.h
+/home/aaa/CLionProjects/Milestone-1/commands/Commands.h
+
+/home/aaa/CLionProjects/Milestone-1/commands/PrintCommand.cpp
+Commands.h
+/home/aaa/CLionProjects/Milestone-1/commands/Commands.h
+
+/home/aaa/CLionProjects/Milestone-1/commands/SetVariableCommand.cpp
+Commands.h
+/home/aaa/CLionProjects/Milestone-1/commands/Commands.h
+
+/home/aaa/CLionProjects/Milestone-1/commands/SleepCommand.cpp
+Commands.h
+/home/aaa/CLionProjects/Milestone-1/commands/Commands.h
 
 /home/aaa/CLionProjects/Milestone-1/interpreter/Expression.h
 
@@ -51,4 +87,24 @@ Expression.h
 /home/aaa/CLionProjects/Milestone-1/interpreter/Expression.h
 algorithm
 -
+
+/home/aaa/CLionProjects/Milestone-1/lexer/Lexer.h
+list
+-
+string
+-
+fstream
+-
+iostream
+-
+algorithm
+-
+
+/home/aaa/CLionProjects/Milestone-1/main.cpp
+commands/Commands.h
+/home/aaa/CLionProjects/Milestone-1/commands/Commands.h
+interpreter/ex1.h
+/home/aaa/CLionProjects/Milestone-1/interpreter/ex1.h
+lexer/Lexer.h
+/home/aaa/CLionProjects/Milestone-1/lexer/Lexer.h
 

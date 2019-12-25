@@ -100,4 +100,10 @@ protected:
     int execute(list<string>::iterator it);
     bool condition(string var1, string con, string var2);
 };
+class PrintCommand: public Command {
+    int execute(list<string>::iterator it);
+};
+class SleepCommand: public Command {
+    int execute(list<string>::iterator it);
+};
 #endif //EX3_COMMANDS_H

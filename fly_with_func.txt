@@ -4,4 +4,3 @@ throttle = 7
 if throttle < 10 {
 	Print(throttle)
 }
-Print("YO")

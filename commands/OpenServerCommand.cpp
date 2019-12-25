@@ -37,6 +37,7 @@ int openServer(int port) {
     //reading from client
     char buffer[1024] = {0};
     int count=0;
+
     while(true){
         count++;
         int valread = read( client_socket , buffer, 1024);
