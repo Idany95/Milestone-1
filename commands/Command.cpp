@@ -9,6 +9,8 @@ void ParseCommand::parser(list<string> LexeredCommandsList) {
     this->commandMap.insert({"var",DefineVarCommand::getInstance()});
     this->commandMap.insert({"if",new IfCommand()});
     this->commandMap.insert({"while",new LoopCommand()});
+    this->commandMap.insert({"Print", new PrintCommand()});
+    this->commandMap.insert({"sleep", new SleepCommand()});
     //...ADD ALL COMMANDS
     list<string>::iterator it;
     for(it = LexeredCommandsList.begin(); it!=LexeredCommandsList.end(); ++it) {

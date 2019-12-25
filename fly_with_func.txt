@@ -1,11 +1,7 @@
-Print("Queen Nili")
-sleep(5000)
-Print("Nili is not a queen")
 var throttle -> sim("/controls/engines/current-engine/throttle")
 var magnetos -> sim("/controls/switches/magnetos")
 throttle = 7
-magnetos = 10
-while throttle < magnetos {
-	throttle = throttle + 1
-	throttle = throttle+1
+if throttle < 10 {
+	Print(throttle)
 }
+Print("YO")

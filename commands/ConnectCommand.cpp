@@ -37,7 +37,7 @@ int conectClient(int port) {
     return 0;
 }
 int ConnectCommand::execute(list<string>::iterator it) {
-    string ip = (*it).substr(1,(*it).length());
+    string ip = (*it).substr(1,(*it).length()-2);
     string port = *(++it);
     thread client_thread(conectClient, calculateValue(port));
     client_thread.join();

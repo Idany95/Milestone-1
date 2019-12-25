@@ -26,11 +26,13 @@ CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.o
  /home/aaa/CLionProjects/Milestone-1/commands/Commands.h
  /home/aaa/CLionProjects/Milestone-1/commands/OpenServerCommand.cpp
 CMakeFiles/ex3.dir/commands/PrintCommand.cpp.o
+ /home/aaa/CLionProjects/Milestone-1/commands/Commands.h
  /home/aaa/CLionProjects/Milestone-1/commands/PrintCommand.cpp
 CMakeFiles/ex3.dir/commands/SetVariableCommand.cpp.o
  /home/aaa/CLionProjects/Milestone-1/commands/Commands.h
  /home/aaa/CLionProjects/Milestone-1/commands/SetVariableCommand.cpp
 CMakeFiles/ex3.dir/commands/SleepCommand.cpp.o
+ /home/aaa/CLionProjects/Milestone-1/commands/Commands.h
  /home/aaa/CLionProjects/Milestone-1/commands/SleepCommand.cpp
 CMakeFiles/ex3.dir/interpreter/ex1.cpp.o
  /home/aaa/CLionProjects/Milestone-1/interpreter/Expression.h

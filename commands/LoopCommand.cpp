@@ -10,8 +10,9 @@ int LoopCommand::execute(list<string>::iterator it) {
     ifCondition = condition(varName1, con, varName2);
     ++it;
     while (ifCondition && *it != "}") {
+        map<string,Command*>::iterator end = ParseCommand::getInstance()->getMap().end();
         //if current string is a commands
-        if (ParseCommand::getInstance()->getMap().find(*it) == ParseCommand::getInstance()->getMap().end()) {
+        if (ParseCommand::getInstance()->getMap().find(*it) != end) {
             Command* tempC = nullptr;
             tempC = ParseCommand::getInstance()->getMap().find(*it)->second;
             int i = tempC->execute(++it);
