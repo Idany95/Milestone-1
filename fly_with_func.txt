@@ -1,3 +1,6 @@
+Print("Queen Nili")
+sleep(5000)
+Print("Nili is not a queen")
 var throttle -> sim("/controls/engines/current-engine/throttle")
 var magnetos -> sim("/controls/switches/magnetos")
 throttle = 7
