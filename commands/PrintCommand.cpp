@@ -9,5 +9,5 @@ int PrintCommand::execute(list<string>::iterator it) {
     else {
         cout << DefineVarCommand::getInstance()->getVarSymbolTable().find(*it)->second->getValue() << endl;
     }
-    return 1;
+    return 0;
 }

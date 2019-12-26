@@ -22,6 +22,9 @@ int LoopCommand::execute(list<string>::iterator it) {
                 i--;
                 commandCounter++;
             }
+            if (i == 0) {
+                commandCounter++;
+            }
             //current string isn't a commands but a variable, we'll update it
         } else {
             Command* setVariable = new SetVariableCommand();
@@ -35,7 +38,18 @@ int LoopCommand::execute(list<string>::iterator it) {
         }
         it++;
         commandCounter++;
-        ifCondition = condition(varName1, con, varName2);
+        if (*it == "}") {
+            ifCondition = condition(varName1, con, varName2);
+            if (ifCondition) {
+                for (int i=0; i<commandCounter; i++) {
+                    it--;
+                }
+                int temp = commandCounter;
+                for (int i=0; i<temp; i++) {
+                    commandCounter--;
+                }
+            }
+        }
     }
     return commandCounter + 4;
 }

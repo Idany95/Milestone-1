@@ -54,6 +54,9 @@ int IfCommand::execute(list<string>::iterator it) {
                     i--;
                     commandCounter++;
                 }
+                if (i == 0){
+                    commandCounter++;
+                }
                 //current string isn't a commands but a variable, we'll update it
             } else {
                 Command* setVariable = new SetVariableCommand();

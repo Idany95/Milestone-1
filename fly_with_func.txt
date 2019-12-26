@@ -1,3 +1,4 @@
+openDataServer(5400)
 var throttle -> sim("/controls/engines/current-engine/throttle")
 var magnetos -> sim("/controls/switches/magnetos")
 throttle = 7

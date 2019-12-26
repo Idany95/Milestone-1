@@ -10,7 +10,7 @@ void ParseCommand::parser(list<string> LexeredCommandsList) {
     this->commandMap.insert({"if",new IfCommand()});
     this->commandMap.insert({"while",new LoopCommand()});
     this->commandMap.insert({"Print",new PrintCommand()});
-    this->commandMap.insert({"sleep",new SleepCommand()});
+    this->commandMap.insert({"Sleep",new SleepCommand()});
     //...ADD ALL COMMANDS
     list<string>::iterator it;
     for(it = LexeredCommandsList.begin(); it!=LexeredCommandsList.end(); ++it) {
@@ -60,6 +60,10 @@ double Command::calculateValue(string strValue){
 
 double Variable::getValue() {
     return this->value;
+}
+
+string Variable::getDirection() {
+    return this->direction;
 }
 
 void Variable::setValue(double newValue) {

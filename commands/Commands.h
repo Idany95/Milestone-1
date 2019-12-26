@@ -22,6 +22,8 @@ public:
     Variable(string direction, string sim);
     void setValue(double newValue);
     double getValue();
+
+    string getDirection();
 };
 
 class Command {
@@ -75,6 +77,8 @@ public:
     }
     map <string,Variable*> getVarSymbolTable();
     int execute(list<string>::iterator it);
+
+    map<string, Variable *> getSimSymbolTable();
 };
 
 class SetVariableCommand: public Command {

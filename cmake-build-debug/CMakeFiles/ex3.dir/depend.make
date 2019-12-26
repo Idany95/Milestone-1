@@ -24,6 +24,7 @@ CMakeFiles/ex3.dir/commands/LoopCommand.cpp.o: ../interpreter/ex1.h
 
 CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.o: ../commands/Commands.h
 CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.o: ../commands/OpenServerCommand.cpp
+CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.o: ../lexer/Lexer.h
 
 CMakeFiles/ex3.dir/commands/PrintCommand.cpp.o: ../commands/Commands.h
 CMakeFiles/ex3.dir/commands/PrintCommand.cpp.o: ../commands/PrintCommand.cpp

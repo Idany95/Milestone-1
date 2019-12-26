@@ -4,18 +4,18 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/aaa/CLionProjects/Milestone-1/commands/Command.cpp" "/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/commands/Command.cpp.o"
-  "/home/aaa/CLionProjects/Milestone-1/commands/ConnectCommand.cpp" "/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/commands/ConnectCommand.cpp.o"
-  "/home/aaa/CLionProjects/Milestone-1/commands/DefineVarCommand.cpp" "/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/commands/DefineVarCommand.cpp.o"
-  "/home/aaa/CLionProjects/Milestone-1/commands/IfCommand.cpp" "/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/commands/IfCommand.cpp.o"
-  "/home/aaa/CLionProjects/Milestone-1/commands/LoopCommand.cpp" "/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/commands/LoopCommand.cpp.o"
-  "/home/aaa/CLionProjects/Milestone-1/commands/OpenServerCommand.cpp" "/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.o"
-  "/home/aaa/CLionProjects/Milestone-1/commands/PrintCommand.cpp" "/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/commands/PrintCommand.cpp.o"
-  "/home/aaa/CLionProjects/Milestone-1/commands/SetVariableCommand.cpp" "/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/commands/SetVariableCommand.cpp.o"
-  "/home/aaa/CLionProjects/Milestone-1/commands/SleepCommand.cpp" "/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/commands/SleepCommand.cpp.o"
-  "/home/aaa/CLionProjects/Milestone-1/interpreter/ex1.cpp" "/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/interpreter/ex1.cpp.o"
-  "/home/aaa/CLionProjects/Milestone-1/lexer/Lexer.cpp" "/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/lexer/Lexer.cpp.o"
-  "/home/aaa/CLionProjects/Milestone-1/main.cpp" "/home/aaa/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/main.cpp.o"
+  "/home/idan/CLionProjects/Milestone-1/commands/Command.cpp" "/home/idan/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/commands/Command.cpp.o"
+  "/home/idan/CLionProjects/Milestone-1/commands/ConnectCommand.cpp" "/home/idan/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/commands/ConnectCommand.cpp.o"
+  "/home/idan/CLionProjects/Milestone-1/commands/DefineVarCommand.cpp" "/home/idan/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/commands/DefineVarCommand.cpp.o"
+  "/home/idan/CLionProjects/Milestone-1/commands/IfCommand.cpp" "/home/idan/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/commands/IfCommand.cpp.o"
+  "/home/idan/CLionProjects/Milestone-1/commands/LoopCommand.cpp" "/home/idan/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/commands/LoopCommand.cpp.o"
+  "/home/idan/CLionProjects/Milestone-1/commands/OpenServerCommand.cpp" "/home/idan/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/commands/OpenServerCommand.cpp.o"
+  "/home/idan/CLionProjects/Milestone-1/commands/PrintCommand.cpp" "/home/idan/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/commands/PrintCommand.cpp.o"
+  "/home/idan/CLionProjects/Milestone-1/commands/SetVariableCommand.cpp" "/home/idan/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/commands/SetVariableCommand.cpp.o"
+  "/home/idan/CLionProjects/Milestone-1/commands/SleepCommand.cpp" "/home/idan/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/commands/SleepCommand.cpp.o"
+  "/home/idan/CLionProjects/Milestone-1/interpreter/ex1.cpp" "/home/idan/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/interpreter/ex1.cpp.o"
+  "/home/idan/CLionProjects/Milestone-1/lexer/Lexer.cpp" "/home/idan/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/lexer/Lexer.cpp.o"
+  "/home/idan/CLionProjects/Milestone-1/main.cpp" "/home/idan/CLionProjects/Milestone-1/cmake-build-debug/CMakeFiles/ex3.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
