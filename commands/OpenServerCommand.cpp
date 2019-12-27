@@ -38,7 +38,6 @@ int openServer(int port) {
     close(socketFD);
     //reading from client
     char buffer[1024] = {0};
-    int count=0;
     map<int,Variable*> orderedMap;
     map<string,Variable*> simSymbolTable = DefineVarCommand::getInstance()->getSimSymbolTable();
     simSymbolTable.insert(
@@ -187,6 +186,7 @@ int openServer(int port) {
     orderedMap.insert({35,simSymbolTable.find("/engines/engine/rpm")->second});
     int counter = 0;
     while(true){
+        mu.lock();
         int valread = read( client_socket , buffer, 1024);
         stringstream bufferedValues(buffer);
         string value;
@@ -199,20 +199,8 @@ int openServer(int port) {
             }
             counter++;
         }
-        /**
-        string stringed_buffer(buffer);
-        istringstream items(stringed_buffer);
-        string item;
-        auto it = DefineVarCommand::getInstance()->getSimSymbolTable().begin();
-        while(getline(items,item,',')) {
-
-        }*/
         std::cout<<buffer<<std::endl;
-        /**
-        count++;
-        if(count==2){
-            break;
-        }**/
+        mu.unlock();
     }
     return 0;
 }
@@ -220,5 +208,6 @@ int OpenServerCommand::execute(list<string>::iterator it) {
     string port = *it;
     thread server_thread(openServer, calculateValue(port));
     server_thread.join();
+    //mu.lock();
     return 1;
 }

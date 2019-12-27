@@ -11,8 +11,11 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <cstring>
-using namespace std;
+#include <queue>
+#include <mutex>
 
+using namespace std;
+static mutex mu;
 class Variable {
 private:
     double value;
@@ -22,7 +25,7 @@ public:
     Variable(string direction, string sim);
     void setValue(double newValue);
     double getValue();
-
+    string getSim();
     string getDirection();
 };
 
@@ -63,6 +66,7 @@ class DefineVarCommand: public Command {
 private:
     map <string,Variable*> varSymbolTable;
     map <string,Variable*> simSymbolTable;
+    queue <Variable*> updateVariablesQueue;
     DefineVarCommand(){};
     static DefineVarCommand *theInstance;
 public:
@@ -76,9 +80,9 @@ public:
         return theInstance;**/
     }
     map <string,Variable*> getVarSymbolTable();
-    int execute(list<string>::iterator it);
-
     map<string, Variable *> getSimSymbolTable();
+    queue <Variable*> getQueue();
+    int execute(list<string>::iterator it);
 };
 
 class SetVariableCommand: public Command {

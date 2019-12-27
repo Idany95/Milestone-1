@@ -75,6 +75,10 @@ Variable::Variable(string newDirection, string newSim) {
     this->sim = newSim;
 }
 
+string Variable::getSim() {
+    return this->sim;
+}
+
 int ParseCommand::execute(list<string>::iterator it) {
     return 0;
 }

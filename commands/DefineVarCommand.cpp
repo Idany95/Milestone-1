@@ -16,3 +16,7 @@ map<string,Variable*> DefineVarCommand::getVarSymbolTable() {
 map<string,Variable*> DefineVarCommand::getSimSymbolTable() {
     return this->simSymbolTable;
 }
+
+queue<Variable*> DefineVarCommand::getQueue() {
+    return this->updateVariablesQueue;
+}
