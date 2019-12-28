@@ -29,6 +29,10 @@ arpa/inet.h
 -
 cstring
 -
+queue
+-
+mutex
+-
 
 /home/idan/CLionProjects/Milestone-1/commands/OpenServerCommand.cpp
 sstream

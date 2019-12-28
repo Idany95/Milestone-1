@@ -55,6 +55,7 @@ public:
 };
 
 class OpenServerCommand: public Command {
+public:
     int execute(list<string>::iterator it);
 };
 
