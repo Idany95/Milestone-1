@@ -213,7 +213,8 @@ int OpenServerCommand::execute(list<string>::iterator it) {
     string port = *it;
     thread server_thread(openServer, calculateValue(port));
     server_thread.join();
-    thread server_loop_thread(serverLoop);
-    server_loop_thread.join();
+    //thread server_loop_thread(serverLoop);
+    OpenServerCommand::getInstance()->loopThread = thread(serverLoop);
+    //server_loop_thread.join();
     return 1;
 }

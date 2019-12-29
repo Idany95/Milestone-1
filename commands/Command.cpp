@@ -4,8 +4,8 @@
 
 void ParseCommand::parser(list<string> LexeredCommandsList) {
     //Initialize commands map
-    this->commandMap.insert({"openDataServer",new OpenServerCommand()});
-    this->commandMap.insert({"connectControlClient",new ConnectCommand()});
+    this->commandMap.insert({"openDataServer",OpenServerCommand::getInstance()});
+    this->commandMap.insert({"connectControlClient", ConnectCommand::getInstance()});
     this->commandMap.insert({"var",DefineVarCommand::getInstance()});
     this->commandMap.insert({"if",new IfCommand()});
     this->commandMap.insert({"while",new LoopCommand()});
@@ -16,7 +16,7 @@ void ParseCommand::parser(list<string> LexeredCommandsList) {
     for(it = LexeredCommandsList.begin(); it!=LexeredCommandsList.end(); ++it) {
         Command* tempC = nullptr;
         tempC = this->commandMap.find(*it)->second;
-        //if current string is a commands
+        //if current string is a command
         if (this->commandMap.find(*it) != this->commandMap.end()) {
             int i = tempC->execute(++it);
             //move the iterator i steps forward
@@ -35,6 +35,8 @@ void ParseCommand::parser(list<string> LexeredCommandsList) {
             }
         }
     }//end of for loop
+    OpenServerCommand::getInstance()->loopThread.join();
+    ConnectCommand::getInstance()->loopThread.join();
 }
 
 bool Command::checkIfNumber(string s) {
@@ -45,6 +47,7 @@ bool Command::checkIfNumber(string s) {
 };
 
 double Command::calculateValue(string strValue){
+    cout << strValue << endl;
     DefineVarCommand* tempCommand = (DefineVarCommand*)(ParseCommand::getInstance()->getMap().find("var")->second);
     vector <Var*> vars;
     Interpreter* i = new Interpreter();
@@ -54,8 +57,14 @@ double Command::calculateValue(string strValue){
         vars.push_back(new Var(x.first, x.second->getValue()));
     }
     i->setVars(vars);
-    Expression* e = i->interpret(strValue);
-    return e->calculate();
+    try {
+        cout << strValue << endl;
+        Expression* e = i->interpret(strValue);
+        return e->calculate();
+    }
+    catch(...) {
+    cout << strValue;
+    }
 }
 
 double Variable::getValue() {

@@ -55,11 +55,28 @@ public:
 };
 
 class OpenServerCommand: public Command {
+private:
+    OpenServerCommand() {};
 public:
+    //SINGLETON
+    static OpenServerCommand *getInstance() {
+        static OpenServerCommand c;
+        return &c;
+    }
+    thread loopThread;
     int execute(list<string>::iterator it);
 };
 
 class ConnectCommand: public Command {
+private:
+    ConnectCommand() {};
+public:
+    //SINGLETON
+    static ConnectCommand *getInstance() {
+        static ConnectCommand c;
+        return &c;
+    }
+    thread loopThread;
     int execute(list<string>::iterator it);
 };
 
