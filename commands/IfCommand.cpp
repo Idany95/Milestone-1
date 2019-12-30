@@ -7,6 +7,10 @@ int IfCommand::execute(list<string>::iterator it) {
     string condition = *(++it);
     string varName2 = *(++it);
     string openScope = *(++it);
+    cout << "ifCommand: ";
+    cout << varName1 << endl;
+    cout << "ifCommand: ";
+    cout << varName2 << endl;
     double varVal1 = this->calculateValue(varName1);
     double varVal2 = this->calculateValue(varName2);
     if (condition.compare("==") == 0) {

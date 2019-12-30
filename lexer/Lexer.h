@@ -21,6 +21,7 @@ public :
     void delimiterArrowRight(string s);
     void delimiterArrowLeft(string s);
     void delimiterTab(string s);
+    void delimCondition(string s, string con);
     bool ifExists(string c, string s);
     list<string> getList();
 };

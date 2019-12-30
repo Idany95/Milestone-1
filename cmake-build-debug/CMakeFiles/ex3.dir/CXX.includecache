@@ -42,6 +42,10 @@ Commands.h
 ../lexer/Lexer.h
 /home/idan/CLionProjects/Milestone-1/lexer/Lexer.h
 
+/home/idan/CLionProjects/Milestone-1/commands/SetVariableCommand.cpp
+Commands.h
+/home/idan/CLionProjects/Milestone-1/commands/Commands.h
+
 /home/idan/CLionProjects/Milestone-1/lexer/Lexer.h
 list
 -

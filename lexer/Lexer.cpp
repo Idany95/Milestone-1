@@ -23,6 +23,30 @@ void Lexer::buildLexer() {
      */
     while (!this->build.empty()) {
         string line = this->build.front();
+        if (ifExists(line,"==") && line != "==") {
+            delimCondition(line, "==");
+            continue;
+        }
+        if (ifExists(line,"<=") && line != "<=") {
+            delimCondition(line, "<=");
+            continue;
+        }
+        if (ifExists(line,">=") && line != ">=") {
+            delimCondition(line, ">=");
+            continue;
+        }
+        if (ifExists(line,"!=") && line != "!=") {
+            delimCondition(line, "!=");
+            continue;
+        }
+        if (ifExists(line,">") && line != ">" && !ifExists(line, "->") && !ifExists(line,"=>")) {
+            delimCondition(line, ">");
+            continue;
+        }
+        if (ifExists(line,"<") && line != "<" && !ifExists(line, "<-") && !ifExists(line, "<=")) {
+            delimCondition(line, "<");
+            continue;
+        }
         if (ifExists(line, "(") && !ifExists(line,"=")) {
             delimiterOpenParentheses(line);
             continue;
@@ -54,7 +78,7 @@ void Lexer::buildLexer() {
             continue;
         }
         // the empty string has no delimiters but we shouldn't put it in the lexer
-        if (line.compare("") != 0) {
+        if (line != "") {
             this->lex.push_front(line);
         }
         // checks if build isn't empty so we can remove a line from it
@@ -62,12 +86,24 @@ void Lexer::buildLexer() {
             this->build.remove(line);
         }
     }
-
-    // CAN BE ADDED TO THE CODE JUST TO PRINT THE LEXER
-    /**while (!this->lex.empty()) {
+    /**
+     * // CAN BE ADDED TO THE CODE JUST TO PRINT THE LEXER
+    while (!this->lex.empty()) {
         cout << this->lex.front() << endl;
         this->lex.pop_front();
-    }**/
+    }*/
+}
+void Lexer::delimCondition(string s, string con) {
+    string begin = "";
+    string left = "";
+    auto start = 0U;
+    auto end = s.find(con);
+    begin = s.substr(start, end);
+    left = s.substr(end+con.length(), s.length());
+    this->build.pop_front();
+    this->build.push_front(begin);
+    this->build.push_front(con);
+    this->build.push_front(left);
 }
 void Lexer::delimiterOpenParentheses(string s) {
     string delim = "(";

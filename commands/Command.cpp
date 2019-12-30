@@ -58,7 +58,6 @@ double Command::calculateValue(string strValue){
     }
     i->setVars(vars);
     try {
-        cout << strValue << endl;
         Expression* e = i->interpret(strValue);
         return e->calculate();
     }

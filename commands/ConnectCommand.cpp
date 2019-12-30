@@ -30,29 +30,36 @@ int conectClient(string ip, int port) {
     } else {
         std::cout<<"Hello message sent to server" <<std::endl;
     }
-    queue<Variable*> variableQueue = DefineVarCommand::getInstance()->getQueue();
-    mu.lock();
-    while (!variableQueue.empty()) {
-        Variable* currentVariable = variableQueue.front();
-        variableQueue.pop();
-        string simPath = currentVariable->getSim();
-        string value = to_string(currentVariable->getValue());
-        string message = "set{" + simPath + "}{" + value + "}\n";
-        char* messageSend = const_cast<char *>(message.c_str());
-        int toSend = send(client_socket , messageSend , strlen(messageSend), 0);
-        if (is_sent == -1) {
-            std::cout << "Error sending message" << std::endl;
+    cout << "In lock" << endl;
+    int counterr = 0;
+    while (true) {
+        mu.lock();
+        if (!DefineVarCommand::getInstance()->getQueue().empty()) {
+            counterr++;
+            cout << "queue size: " << counterr << endl;
+            Variable* currentVariable = DefineVarCommand::getInstance()->getQueue().front();
+            DefineVarCommand::getInstance()->getQueue().pop();
+            string simPath = currentVariable->getSim();
+            string value = to_string(currentVariable->getValue());
+            string message = "set{" + simPath + "}{" + value + "}\n";
+            char* messageSend = const_cast<char *>(message.c_str());
+            int toSend = send(client_socket , messageSend , strlen(messageSend), 0);
+            if (is_sent == -1) {
+                std::cout << "Error sending message" << std::endl;
+            }
         }
+        mu.unlock();
     }
-    mu.unlock();
     close(client_socket);
     return 0;
 }
 int ConnectCommand::execute(list<string>::iterator it) {
     string ip = (*it).substr(1,(*it).length()-2);
     string port = *(++it);
+    cout << "connectCommand: ";
+    cout << port << endl;
     ConnectCommand::getInstance()->loopThread = thread(conectClient,ip,calculateValue(port));
     //client_thread(conectClient,ip,calculateValue(port));
     //client_thread.join();
-    return 2;
+    return 1;
 }

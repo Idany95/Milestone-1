@@ -191,12 +191,13 @@ void serverLoop() {
     orderedMap.insert({35, simSymbolTable.find("/engines/engine/rpm")->second});
     int counter = 0;
     while (true) {
-        mu.lock();
+
         int client_socket = s_client_socket;
         int valread = read(client_socket, buffer, 1024);
         stringstream bufferedValues(buffer);
         string value;
         while (getline(bufferedValues, value, ',')) {
+            mu.lock();
             if (counter == 36) {
                 counter = 0;
             }
@@ -204,17 +205,19 @@ void serverLoop() {
                 orderedMap.find(counter)->second->setValue(stod(value));
             }
             counter++;
+            mu.unlock();
         }
-        std::cout << buffer << std::endl;
-        mu.unlock();
+        //std::cout << buffer << std::endl;
     }
 }
 int OpenServerCommand::execute(list<string>::iterator it) {
     string port = *it;
+    cout << "serverCommand: ";
+    cout << port << endl;
     thread server_thread(openServer, calculateValue(port));
     server_thread.join();
     //thread server_loop_thread(serverLoop);
     OpenServerCommand::getInstance()->loopThread = thread(serverLoop);
     //server_loop_thread.join();
-    return 1;
+    return 0;
 }
