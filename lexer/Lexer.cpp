@@ -86,8 +86,9 @@ void Lexer::buildLexer() {
             this->build.remove(line);
         }
     }
+
     /**
-     * // CAN BE ADDED TO THE CODE JUST TO PRINT THE LEXER
+    //CAN BE ADDED TO THE CODE JUST TO PRINT THE LEXER
     while (!this->lex.empty()) {
         cout << this->lex.front() << endl;
         this->lex.pop_front();

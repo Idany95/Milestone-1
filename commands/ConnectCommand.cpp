@@ -34,11 +34,11 @@ int conectClient(string ip, int port) {
     int counterr = 0;
     while (true) {
         mu.lock();
-        if (!updateVariablesQueue.empty()) {
+        if (!DefineVarCommand::getInstance()->getQueue()->empty()) {
             counterr++;
             cout << "queue size: " << counterr << endl;
-            Variable* currentVariable = updateVariablesQueue.front();
-            updateVariablesQueue.pop();
+            Variable* currentVariable = DefineVarCommand::getInstance()->getQueue()->front();
+            DefineVarCommand::getInstance()->getQueue()->pop();
             string simPath = currentVariable->getSim();
             string value = to_string(currentVariable->getValue());
             string message = "set{" + simPath + "}{" + value + "}\n";

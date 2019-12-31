@@ -7,7 +7,7 @@ int PrintCommand::execute(list<string>::iterator it) {
     }
         //else it's a variable
     else {
-        cout << DefineVarCommand::getInstance()->getVarSymbolTable().find(*it)->second->getValue() << endl;
+        cout << DefineVarCommand::getInstance()->getVarSymbolTable()->find(*it)->second->getValue() << endl;
     }
     return 0;
 }

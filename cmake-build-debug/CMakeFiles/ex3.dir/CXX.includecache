@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/idan/CLionProjects/Milestone-1/commands/Command.cpp
-Commands.h
-/home/idan/CLionProjects/Milestone-1/commands/Commands.h
-../interpreter/ex1.h
-/home/idan/CLionProjects/Milestone-1/interpreter/ex1.h
-
 /home/idan/CLionProjects/Milestone-1/commands/Commands.h
 iostream
 -
@@ -40,26 +34,6 @@ queue
 mutex
 -
 
-/home/idan/CLionProjects/Milestone-1/commands/ConnectCommand.cpp
-Commands.h
-/home/idan/CLionProjects/Milestone-1/commands/Commands.h
-
-/home/idan/CLionProjects/Milestone-1/commands/DefineVarCommand.cpp
-Commands.h
-/home/idan/CLionProjects/Milestone-1/commands/Commands.h
-
-/home/idan/CLionProjects/Milestone-1/commands/IfCommand.cpp
-Commands.h
-/home/idan/CLionProjects/Milestone-1/commands/Commands.h
-../interpreter/ex1.h
-/home/idan/CLionProjects/Milestone-1/interpreter/ex1.h
-
-/home/idan/CLionProjects/Milestone-1/commands/LoopCommand.cpp
-Commands.h
-/home/idan/CLionProjects/Milestone-1/commands/Commands.h
-../interpreter/ex1.h
-/home/idan/CLionProjects/Milestone-1/interpreter/ex1.h
-
 /home/idan/CLionProjects/Milestone-1/commands/OpenServerCommand.cpp
 sstream
 -
@@ -67,34 +41,6 @@ Commands.h
 /home/idan/CLionProjects/Milestone-1/commands/Commands.h
 ../lexer/Lexer.h
 /home/idan/CLionProjects/Milestone-1/lexer/Lexer.h
-
-/home/idan/CLionProjects/Milestone-1/commands/PrintCommand.cpp
-Commands.h
-/home/idan/CLionProjects/Milestone-1/commands/Commands.h
-
-/home/idan/CLionProjects/Milestone-1/commands/SetVariableCommand.cpp
-Commands.h
-/home/idan/CLionProjects/Milestone-1/commands/Commands.h
-
-/home/idan/CLionProjects/Milestone-1/commands/SleepCommand.cpp
-Commands.h
-/home/idan/CLionProjects/Milestone-1/commands/Commands.h
-
-/home/idan/CLionProjects/Milestone-1/interpreter/Expression.h
-
-/home/idan/CLionProjects/Milestone-1/interpreter/ex1.h
-string
--
-stack
--
-queue
--
-typeinfo
--
-Expression.h
-/home/idan/CLionProjects/Milestone-1/interpreter/Expression.h
-algorithm
--
 
 /home/idan/CLionProjects/Milestone-1/lexer/Lexer.h
 list
@@ -107,12 +53,4 @@ iostream
 -
 algorithm
 -
-
-/home/idan/CLionProjects/Milestone-1/main.cpp
-commands/Commands.h
-/home/idan/CLionProjects/Milestone-1/commands/Commands.h
-interpreter/ex1.h
-/home/idan/CLionProjects/Milestone-1/interpreter/ex1.h
-lexer/Lexer.h
-/home/idan/CLionProjects/Milestone-1/lexer/Lexer.h
 

@@ -29,8 +29,6 @@ public:
     string getDirection();
 };
 
-static queue <Variable*> updateVariablesQueue;
-
 class Command {
 public:
     virtual int execute(list<string>::iterator it) = 0;
@@ -84,8 +82,10 @@ public:
 
 class DefineVarCommand: public Command {
 private:
-    map <string,Variable*> varSymbolTable;
-    map <string,Variable*> simSymbolTable;
+    map <string,Variable*> *varSymbolTable = new map<string,Variable*>();
+    map <string,Variable*> *simSymbolTable = new map<string,Variable*>();
+    map <int,Variable*> *orderedMap = new map<int,Variable*>();
+    queue <Variable*> *updateVariablesQueue = new queue<Variable*>();
     DefineVarCommand(){};
     static DefineVarCommand *theInstance;
 public:
@@ -98,9 +98,11 @@ public:
         }
         return theInstance;**/
     }
-    map <string,Variable*> getVarSymbolTable();
-    map<string, Variable *> getSimSymbolTable();
-    queue <Variable*> getQueue();
+    map <string,Variable*>* getVarSymbolTable();
+    map<string, struct Variable *>* getSimSymbolTable();
+    map<int, struct Variable *>* getOrderedMap();
+
+    queue <Variable*>* getQueue();
     int execute(list<string>::iterator it);
 };
 
