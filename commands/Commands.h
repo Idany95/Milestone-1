@@ -29,6 +29,8 @@ public:
     string getDirection();
 };
 
+static queue <Variable*> updateVariablesQueue;
+
 class Command {
 public:
     virtual int execute(list<string>::iterator it) = 0;
@@ -84,7 +86,6 @@ class DefineVarCommand: public Command {
 private:
     map <string,Variable*> varSymbolTable;
     map <string,Variable*> simSymbolTable;
-    queue <Variable*> updateVariablesQueue;
     DefineVarCommand(){};
     static DefineVarCommand *theInstance;
 public:

@@ -10,8 +10,8 @@ int SetVariableCommand::execute(list<string>::iterator it) {
     //find varSymbolTable on "DefineVarCommand" and update variable's value
     DefineVarCommand::getInstance()->getVarSymbolTable().find(varName)->second->setValue(value);
     Variable* v = DefineVarCommand::getInstance()->getVarSymbolTable().find(varName)->second;
-    DefineVarCommand::getInstance()->getQueue().push(v);
+    updateVariablesQueue.push(v);
     //PUSHING DOESENT WORK
-    cout << "queue in set variable" << DefineVarCommand::getInstance()->getQueue().size() << endl;
+    cout << "queue in set variable" << updateVariablesQueue.size() << endl;
     return 2;
 }

@@ -202,7 +202,7 @@ void serverLoop() {
                 counter = 0;
             }
             if (orderedMap.find(counter)->second->getDirection() == "<-") {
-                orderedMap.find(counter)->second->setValue(stod(value));
+                //orderedMap.find(counter)->second->setValue(stod(value));
             }
             counter++;
             mu.unlock();
