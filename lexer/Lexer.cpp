@@ -39,6 +39,11 @@ void Lexer::buildLexer() {
             delimCondition(line, "!=");
             continue;
         }
+        if (ifExists(line,"=") && line != "=" && !ifExists(line, "==") && !ifExists(line, "!=")
+            && !ifExists(line, "<=") && !ifExists(line, ">=")) {
+            delimCondition(line, "=");
+            continue;
+        }
         if (ifExists(line,">") && line != ">" && !ifExists(line, "->") && !ifExists(line,"=>")) {
             delimCondition(line, ">");
             continue;
@@ -85,14 +90,32 @@ void Lexer::buildLexer() {
         if (!this->build.empty()) {
             this->build.remove(line);
         }
-    }
-
-    /**
-    //CAN BE ADDED TO THE CODE JUST TO PRINT THE LEXER
+    }/**
     while (!this->lex.empty()) {
+        line = this->lex.front();
+        if (ifExists(line, "\"")) {
+            this->lex.pop_front();
+            delimQuotatin(line);
+        }
+        else {
+            this->lex.pop_front();
+            this->build.push_front(line);
+        }
+    }
+    while (!this->build.empty()) {
+        line = this->build.front();
+        this->build.pop_front();
+        this->lex.push_front(line);
+    }*/
+    // CAN BE ADDED TO THE CODE JUST TO PRINT THE LEXER
+    /**while (!this->lex.empty()) {
         cout << this->lex.front() << endl;
         this->lex.pop_front();
-    }*/
+    }**/
+}
+void Lexer::delimQuotatin(string s) {
+    string x = s.substr(1,s.length()-2);
+    this->build.push_front(x);
 }
 void Lexer::delimCondition(string s, string con) {
     string begin = "";

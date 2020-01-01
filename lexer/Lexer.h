@@ -24,5 +24,7 @@ public :
     void delimCondition(string s, string con);
     bool ifExists(string c, string s);
     list<string> getList();
+
+    void delimQuotatin(string s);
 };
 #endif //EX3_LEXER_H
