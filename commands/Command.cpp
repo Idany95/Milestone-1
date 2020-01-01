@@ -206,10 +206,12 @@ double Command::calculateValue(string strValue){
     i->setVars(*vars);
     try {
         Expression* e = i->interpret(strValue);
-        return e->calculate();
+        double value = e->calculate();
+        cout << value << endl;
+        return value;
     }
     catch(...) {
-    cout << strValue;
+    cout << "couldn't calculate value " << strValue;
     }
 }
 

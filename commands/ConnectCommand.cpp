@@ -36,12 +36,12 @@ int conectClient(string ip, int port) {
         mu.lock();
         if (!DefineVarCommand::getInstance()->getQueue()->empty()) {
             counterr++;
-            cout << "queue size: " << counterr << endl;
+            //cout << "queue size: " << counterr << endl;
             Variable* currentVariable = DefineVarCommand::getInstance()->getQueue()->front();
             DefineVarCommand::getInstance()->getQueue()->pop();
             string simPath = currentVariable->getSim();
             string value = to_string(currentVariable->getValue());
-            string message = "set{" + simPath + "}{" + value + "}\n";
+            string message = "set " + simPath + " " + value + "\r\n";
             char* messageSend = const_cast<char *>(message.c_str());
             int toSend = send(client_socket , messageSend , strlen(messageSend), 0);
             if (is_sent == -1) {

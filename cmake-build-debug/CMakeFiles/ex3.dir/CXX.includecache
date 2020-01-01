@@ -6,40 +6,8 @@
 
 #IncludeRegexTransform: 
 
-/home/idan/CLionProjects/Milestone-1/commands/Commands.h
-iostream
--
-map
-/home/idan/CLionProjects/Milestone-1/commands/map
-list
-/home/idan/CLionProjects/Milestone-1/commands/list
-vector
-/home/idan/CLionProjects/Milestone-1/commands/vector
-thread
--
-sys/socket.h
--
-string
--
-unistd.h
--
-netinet/in.h
--
-arpa/inet.h
--
-cstring
--
-queue
--
-mutex
--
-
-/home/idan/CLionProjects/Milestone-1/commands/OpenServerCommand.cpp
-sstream
--
-Commands.h
-/home/idan/CLionProjects/Milestone-1/commands/Commands.h
-../lexer/Lexer.h
+/home/idan/CLionProjects/Milestone-1/lexer/Lexer.cpp
+Lexer.h
 /home/idan/CLionProjects/Milestone-1/lexer/Lexer.h
 
 /home/idan/CLionProjects/Milestone-1/lexer/Lexer.h

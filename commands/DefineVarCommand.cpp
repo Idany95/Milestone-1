@@ -2,17 +2,24 @@
 #include "Commands.h"
 //DefineVarCommand* DefineVarCommand::theInstance = 0;
 int DefineVarCommand::execute(list<string>::iterator it) {
-    std::ostringstream oss;
     string varName = *it;
-    string direction = *(++it);
-    string simPath = *(++(++it));
-    //inserting to Variable Symbol Table
-    //oss<< simPath;
-    //string s = oss.str();
-    Variable* v = this->simSymbolTable->find(simPath)->second;
-    this->varSymbolTable->insert({varName, v});
-    //we return 3, cause we went over 3 items in the list
-    return 3;
+    string sign = *(++it);
+    if(sign == "->" || sign == "<-") {
+        string direction = sign;
+        string simPath = *(++(++it));
+        simPath = (simPath).substr(1,simPath.length()-2);
+        //inserting to Variable Symbol Table
+        Variable* v = this->simSymbolTable->find(simPath)->second;
+        this->varSymbolTable->insert({varName, v});
+        //we return 3, cause we went over 3 items in the list
+        return 3;
+    }
+    else {
+        string secondVarName = *(++it);
+        this->varSymbolTable->insert({varName, new Variable("<-", "")});
+        this->varSymbolTable->find(varName)->second->setValue(calculateValue(secondVarName));
+        return 2;
+    }
 }
 
 map<string,Variable*>* DefineVarCommand::getVarSymbolTable() {

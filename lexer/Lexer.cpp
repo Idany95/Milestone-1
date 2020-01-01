@@ -1,7 +1,7 @@
 #include "Lexer.h"
 
 void Lexer::buildLexer() {
-    ifstream f("../fly_with_func.txt", ios::in);
+    ifstream f("../fly.txt", ios::in);
     if (!f.is_open()) {
         cout << "can't open file";
         exit(1);

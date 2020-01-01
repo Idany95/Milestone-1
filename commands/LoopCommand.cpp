@@ -54,10 +54,10 @@ int LoopCommand::execute(list<string>::iterator it) {
     return commandCounter + 4;
 }
 bool LoopCommand::condition(string var1, string con, string var2) {
-    cout << "loopCommand: ";
+    /**cout << "loopCommand: ";
     cout << var1 << endl;
     cout << "loopCommand: ";
-    cout << var2 << endl;
+    cout << var2 << endl;**/
     double varVal1 = this->calculateValue(var1);
     double varVal2 = this->calculateValue(var2);
     if (con.compare("==") == 0) {
