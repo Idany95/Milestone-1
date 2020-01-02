@@ -2,7 +2,7 @@
 #include "Commands.h"
 #include "../interpreter/ex1.h"
 
-void ParseCommand::parser(list<string> LexeredCommandsList) {
+void ParseCommand::parser(list<string>* LexeredCommandsList) {
     //Initialize commands map
     this->commandMap.insert({"openDataServer",OpenServerCommand::getInstance()});
     this->commandMap.insert({"connectControlClient", ConnectCommand::getInstance()});
@@ -161,7 +161,7 @@ void ParseCommand::parser(list<string> LexeredCommandsList) {
     orderedMap->insert({35, simSymbolTable->find("/engines/engine/rpm")->second});
 
     list<string>::iterator it;
-    for(it = LexeredCommandsList.begin(); it!=LexeredCommandsList.end(); ++it) {
+    for(it = LexeredCommandsList->begin(); it!=LexeredCommandsList->end(); ++it) {
         Command* tempC = nullptr;
         tempC = this->commandMap.find(*it)->second;
         //if current string is a command
@@ -211,7 +211,7 @@ double Command::calculateValue(string strValue){
         return value;
     }
     catch(...) {
-    cout << "couldn't calculate value " << strValue;
+    cout << "couldn't calculate value " << strValue << endl;
     }
 }
 
@@ -238,4 +238,8 @@ string Variable::getSim() {
 
 int ParseCommand::execute(list<string>::iterator it) {
     return 0;
+}
+
+void Variable::setDirection(string newDirection) {
+    this->direction = newDirection;
 }

@@ -54,7 +54,12 @@ void serverLoop() {
                 counter = 0;
             }
             if (DefineVarCommand::getInstance()->getOrderedMap()->find(counter)->second->getDirection() == "<-") {
-                DefineVarCommand::getInstance()->getOrderedMap()->find(counter)->second->setValue(stod(value));
+                try {
+                    DefineVarCommand::getInstance()->getOrderedMap()->find(counter)->second->setValue(stod(value));
+                }
+                catch(...) {
+                    cout << "Couldn't use stod in OpenServerCommand" << endl;
+                }
             }
             counter++;
             mu.unlock();

@@ -24,6 +24,7 @@ private:
 public:
     Variable(string direction, string sim);
     void setValue(double newValue);
+    void setDirection(string newDirection);
     double getValue();
     string getSim();
     string getDirection();
@@ -48,7 +49,7 @@ public:
         return &c;
     }
     int execute(list<string>::iterator it);
-    void parser(list<string> LexeredCommandsList);
+    void parser(list<string>* LexeredCommandsList);
     map <string,Command*> getMap() {
         return this->commandMap;
     };
@@ -101,7 +102,6 @@ public:
     map <string,Variable*>* getVarSymbolTable();
     map<string, struct Variable *>* getSimSymbolTable();
     map<int, struct Variable *>* getOrderedMap();
-
     queue <Variable*>* getQueue();
     int execute(list<string>::iterator it);
 };

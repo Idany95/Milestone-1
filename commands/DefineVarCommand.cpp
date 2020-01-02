@@ -11,6 +11,7 @@ int DefineVarCommand::execute(list<string>::iterator it) {
         //inserting to Variable Symbol Table
         Variable* v = this->simSymbolTable->find(simPath)->second;
         this->varSymbolTable->insert({varName, v});
+        v->setDirection(sign);
         //we return 3, cause we went over 3 items in the list
         return 3;
     }

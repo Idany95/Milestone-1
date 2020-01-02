@@ -9,9 +9,9 @@ using namespace std;
 class Lexer {
 private:
     // the list with all the commands
-    list<string> lex;
+    list<string>* lex = new list<string>();
     // a temp list that helps us to build lex
-    list<string> build;
+    list<string>* build = new list<string>();
 public :
     void buildLexer();
     void delimiterOpenParentheses(string s);
@@ -22,9 +22,8 @@ public :
     void delimiterArrowLeft(string s);
     void delimiterTab(string s);
     void delimCondition(string s, string con);
+    void delimEquation(string s);
     bool ifExists(string c, string s);
-    list<string> getList();
-
-    void delimQuotatin(string s);
+    list<std::__cxx11::string> * getList();
 };
 #endif //EX3_LEXER_H

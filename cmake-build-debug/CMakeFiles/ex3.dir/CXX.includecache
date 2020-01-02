@@ -40,6 +40,10 @@ Commands.h
 ../interpreter/ex1.h
 /home/idan/CLionProjects/Milestone-1/interpreter/ex1.h
 
+/home/idan/CLionProjects/Milestone-1/commands/SetVariableCommand.cpp
+Commands.h
+/home/idan/CLionProjects/Milestone-1/commands/Commands.h
+
 /home/idan/CLionProjects/Milestone-1/interpreter/Expression.h
 
 /home/idan/CLionProjects/Milestone-1/interpreter/ex1.h

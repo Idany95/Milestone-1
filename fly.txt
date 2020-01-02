@@ -47,9 +47,9 @@ var h0 = heading
 breaks = 0
 throttle = 1
 while alt < 1000 {
-	rudder = heading/80
-	aileron = -roll/70
-	elevator = pitch/50
+	rudder= (h0 - heading)/80
+	aileron= -roll / 70
+	elevator= pitch / 50
 	Sleep(250)
 }
 Print("done")

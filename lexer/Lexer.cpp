@@ -12,7 +12,7 @@ void Lexer::buildLexer() {
          * just read the lines as they are from the file and put in build - a temp
          * list that helps us to build lex
          */
-        this->build.push_front(line);
+        this->build->push_front(line);
     }
     f.close();
     /**
@@ -21,8 +21,13 @@ void Lexer::buildLexer() {
      * the program deletes it from bulid and put in lex. if an element still has
      * delimiters, it still be in bulid.
      */
-    while (!this->build.empty()) {
-        string line = this->build.front();
+    while (!this->build->empty()) {
+        string line = this->build->front();
+        if (ifExists(line,"=") && !ifExists(line, "==") && !ifExists(line, "!=")
+            && !ifExists(line, "<=") && !ifExists(line, ">=")) {
+            delimEquation(line);
+            continue;
+        }
         if (ifExists(line,"==") && line != "==") {
             delimCondition(line, "==");
             continue;
@@ -84,38 +89,59 @@ void Lexer::buildLexer() {
         }
         // the empty string has no delimiters but we shouldn't put it in the lexer
         if (line != "") {
-            this->lex.push_front(line);
+            this->lex->push_front(line);
         }
         // checks if build isn't empty so we can remove a line from it
-        if (!this->build.empty()) {
-            this->build.remove(line);
-        }
-    }/**
-    while (!this->lex.empty()) {
-        line = this->lex.front();
-        if (ifExists(line, "\"")) {
-            this->lex.pop_front();
-            delimQuotatin(line);
-        }
-        else {
-            this->lex.pop_front();
-            this->build.push_front(line);
+        if (!this->build->empty()) {
+            this->build->pop_front();
         }
     }
-    while (!this->build.empty()) {
-        line = this->build.front();
-        this->build.pop_front();
-        this->lex.push_front(line);
-    }*/
-    // CAN BE ADDED TO THE CODE JUST TO PRINT THE LEXER
-    /**while (!this->lex.empty()) {
+    /**CAN BE ADDED TO THE CODE JUST TO PRINT THE LEXER
+    while (!this->lex.empty()) {
         cout << this->lex.front() << endl;
         this->lex.pop_front();
-    }**/
+    }*/
 }
-void Lexer::delimQuotatin(string s) {
-    string x = s.substr(1,s.length()-2);
-    this->build.push_front(x);
+void Lexer::delimEquation(string s) {
+    string delim = "=";
+    string begin = "";
+    string left = "";
+    auto start = 0U;
+    auto end = s.find(delim);
+    begin = s.substr(start, end);
+    left = s.substr(end+1, s.length());
+    this->build->pop_front();
+    string newLeft = left;
+    string newBegin = begin;
+    if (left[0] == ' ') {
+        newLeft = left.substr(1, left.length());
+        this->lex->push_front(newLeft);
+    }
+    else {
+        this->lex->push_front(newLeft);
+    }
+    this->lex->push_front("=");
+    if (ifExists(begin, "\t")) {
+        newBegin = begin.substr(1, begin.length());
+        this->lex->push_front(newBegin);
+    }
+    else if (ifExists(begin, " ")) {
+        if (ifExists(begin, "var")) {
+            newBegin = begin.substr(3, begin.length());
+            std::string::iterator end_pos = std::remove(newBegin.begin(), newBegin.end(), ' ');
+            newBegin.erase(end_pos, newBegin.end());
+            this->lex->push_front(newBegin);
+            this->lex->push_front("var");
+        }
+        else {
+            std::string::iterator end_pos = std::remove(newBegin.begin(), newBegin.end(), ' ');
+            newBegin.erase(end_pos, newBegin.end());
+            this->lex->push_front(newBegin);
+        }
+    }
+    else {
+        this->lex->push_front(newBegin);
+    }
 }
 void Lexer::delimCondition(string s, string con) {
     string begin = "";
@@ -124,10 +150,10 @@ void Lexer::delimCondition(string s, string con) {
     auto end = s.find(con);
     begin = s.substr(start, end);
     left = s.substr(end+con.length(), s.length());
-    this->build.pop_front();
-    this->build.push_front(begin);
-    this->build.push_front(con);
-    this->build.push_front(left);
+    this->build->pop_front();
+    this->build->push_front(begin);
+    this->build->push_front(con);
+    this->build->push_front(left);
 }
 void Lexer::delimiterOpenParentheses(string s) {
     string delim = "(";
@@ -137,15 +163,15 @@ void Lexer::delimiterOpenParentheses(string s) {
     auto end = s.find(delim);
     begin = s.substr(start, end);
     left = s.substr(end+1, s.length());
-    this -> build.pop_front();
-    this -> build.push_front(begin);
-    this -> build.push_front(left);
+    this -> build->pop_front();
+    this -> build->push_front(begin);
+    this -> build->push_front(left);
 }
 void Lexer::delimiterTab(string s) {
     string left = "";
     left = s.substr(1);
-    this -> build.pop_front();
-    this->build.push_front(left);
+    this -> build->pop_front();
+    this->build->push_front(left);
 }
 void Lexer::delimiterCloseParentheses(string s) {
     string delim = ")";
@@ -155,9 +181,9 @@ void Lexer::delimiterCloseParentheses(string s) {
     auto end = s.find(delim);
     begin = s.substr(start, end);
     left = s.substr(end+1, s.length());
-    this -> build.pop_front();
-    this -> build.push_front(begin);
-    this -> build.push_front(left);
+    this -> build->pop_front();
+    this -> build->push_front(begin);
+    this -> build->push_front(left);
 }
 
 void Lexer::delimiterSpace(string s) {
@@ -168,19 +194,19 @@ void Lexer::delimiterSpace(string s) {
     auto end = s.find(delim);
     begin = s.substr(start, end);
     left = s.substr(end+1, s.length());
-    this -> build.pop_front();
+    this -> build->pop_front();
     if (ifExists(left, "=")) {
         auto startnew = 0U;
         auto endnew = left.find(" ");
         string beginnew = left.substr(startnew, endnew);
         string leftnew = left.substr(endnew+1, s.length());
-        this->lex.push_front(leftnew);
-        this->lex.push_front(beginnew);
-        this->lex.push_front(begin);
+        this->lex->push_front(leftnew);
+        this->lex->push_front(beginnew);
+        this->lex->push_front(begin);
     }
     else {
-        this -> build.push_front(begin);
-        this -> build.push_front(left);
+        this -> build->push_front(begin);
+        this -> build->push_front(left);
 
     }
 }
@@ -192,9 +218,9 @@ void Lexer::delimiterComma(string s) {
     auto end = s.find(delim);
     begin = s.substr(start, end);
     left = s.substr(end+1, s.length());
-    this -> build.pop_front();
-    this -> build.push_front(begin);
-    this -> build.push_front(left);
+    this -> build->pop_front();
+    this -> build->push_front(begin);
+    this -> build->push_front(left);
 }
 
 void Lexer::delimiterArrowRight(string s) {
@@ -206,10 +232,10 @@ void Lexer::delimiterArrowRight(string s) {
     auto end = s.find(delim);
     begin = s.substr(start, end);
     left = s.substr(end + delim.length(), s.length());
-    this -> build.pop_front();
-    this -> build.push_front(begin);
-    this->build.push_front(arrow);
-    this -> build.push_front(left);
+    this -> build->pop_front();
+    this -> build->push_front(begin);
+    this->build->push_front(arrow);
+    this -> build->push_front(left);
 }
 
 void Lexer::delimiterArrowLeft(string s) {
@@ -221,10 +247,10 @@ void Lexer::delimiterArrowLeft(string s) {
     auto end = s.find(delim);
     begin = s.substr(start, end);
     left = s.substr(end + delim.length(), s.length());
-    this -> build.pop_front();
-    this -> build.push_front(begin);
-    this->build.push_front(arrow);
-    this -> build.push_front(left);
+    this -> build->pop_front();
+    this -> build->push_front(begin);
+    this->build->push_front(arrow);
+    this -> build->push_front(left);
 }
 bool Lexer ::ifExists(string s, string c) {
     /**
@@ -236,6 +262,6 @@ bool Lexer ::ifExists(string s, string c) {
     return false;
 }
 
-list<string> Lexer::getList() {
+list<string>* Lexer::getList() {
     return this->lex;
 }
