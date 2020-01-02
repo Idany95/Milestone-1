@@ -9,16 +9,18 @@ int SetVariableCommand::execute(list<string>::iterator it) {
     //cout << varName << " is our varName " << endl;
     //mu.lock();
     Variable* temp = DefineVarCommand::getInstance()->getVarSymbolTable()->find(varName)->second;
-    temp->setValue(value);
-    //cout << value << " a" << endl;
-    Variable* v = DefineVarCommand::getInstance()->getVarSymbolTable()->find(varName)->second;
-    //cout << " b" << endl;
-    //check variable's direction
-    if(v->getDirection() == "->") {
-        DefineVarCommand::getInstance()->getQueue()->push(v);
-    }
-    else{
-        cout << "didn't push " << varName << " to queue" << endl;
+    if (temp->getValue() != value) {
+        temp->setValue(value);
+        //cout << value << " a" << endl;
+        Variable* v = DefineVarCommand::getInstance()->getVarSymbolTable()->find(varName)->second;
+        //cout << " b" << endl;
+        //check variable's direction
+        if(v->getDirection() == "->") {
+            DefineVarCommand::getInstance()->getQueue()->push(v);
+        }
+        else{
+            cout << "didn't push " << varName << " to queue" << endl;
+        }
     }
     //mu.unlock();
     //PUSHING DOESENT WORK

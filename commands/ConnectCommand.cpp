@@ -30,7 +30,7 @@ int conectClient(string ip, int port) {
     } else {
         std::cout<<"Hello message sent to server" <<std::endl;
     }
-    while (true) {
+    while (ParseCommand::getInstance()->getParsingFlag() == false) {
         mu.lock();
         if (!DefineVarCommand::getInstance()->getQueue()->empty()) {
             Variable* currentVariable = DefineVarCommand::getInstance()->getQueue()->front();

@@ -1,12 +1,17 @@
 #include "Lexer.h"
 
-void Lexer::buildLexer() {
-    ifstream f("../fly.txt", ios::in);
+/**
+ * The lexer class, builds the lexer.
+ * @param filename  the name of the txt file.
+ */
+void Lexer::buildLexer(char* filename) {
+    ifstream f(filename, ios::in);
     if (!f.is_open()) {
         cout << "can't open file";
         exit(1);
     }
     string line;
+    // reads the file
     while (getline(f, line)) {
         /*
          * just read the lines as they are from the file and put in build - a temp
@@ -23,11 +28,21 @@ void Lexer::buildLexer() {
      */
     while (!this->build->empty()) {
         string line = this->build->front();
+        // cases of print sleep openDataServer and connectControlClient
+        if (ifExists(line, "Print") || ifExists(line, "Sleep") || ifExists(line, "openDataServer")
+         || ifExists(line, "connectControlClient")) {
+            delimExpression(line);
+            continue;
+        }
+        // case of set variable
         if (ifExists(line,"=") && !ifExists(line, "==") && !ifExists(line, "!=")
             && !ifExists(line, "<=") && !ifExists(line, ">=")) {
             delimEquation(line);
             continue;
         }
+        /**
+         * next cases for condition or loop.
+         */
         if (ifExists(line,"==") && line != "==") {
             delimCondition(line, "==");
             continue;
@@ -57,6 +72,9 @@ void Lexer::buildLexer() {
             delimCondition(line, "<");
             continue;
         }
+        /**
+         * cases for ( and )
+         */
         if (ifExists(line, "(") && !ifExists(line,"=")) {
             delimiterOpenParentheses(line);
             continue;
@@ -65,14 +83,23 @@ void Lexer::buildLexer() {
             delimiterCloseParentheses(line);
             continue;
         }
+        /**
+         * delete commas
+         */
         if (ifExists(line, ",")) {
             delimiterComma(line);
             continue;
         }
+        /**
+         * delete spaces (and not tabs)
+         */
         if (ifExists(line, " ") && !ifExists(line, "\t") && !ifExists(line, "\"")) {
             delimiterSpace(line);
             continue;
         }
+        /**
+         * next cases for the case that a line contains arrow but still isn't an arrow
+         */
         // because we push -> to lex and we dont want to tuch it
         if (ifExists(line, "->") && !line.compare("->")==0) {
             delimiterArrowRight(line);
@@ -83,6 +110,9 @@ void Lexer::buildLexer() {
             delimiterArrowLeft(line);
             continue;
         }
+        /**
+         * delete tabs
+         */
         if (ifExists(line, "\t")) {
             delimiterTab(line);
             continue;
@@ -96,11 +126,55 @@ void Lexer::buildLexer() {
             this->build->pop_front();
         }
     }
-    /**CAN BE ADDED TO THE CODE JUST TO PRINT THE LEXER
-    while (!this->lex.empty()) {
-        cout << this->lex.front() << endl;
-        this->lex.pop_front();
-    }*/
+}
+
+void Lexer::delimExpression(string s) {
+    string delim = "(";
+    string begin = "";
+    string left = "";
+    auto start = 0U;
+    auto end = s.find(delim);
+    begin = s.substr(start, end);
+    left = s.substr(end + 1, s.length());
+    this->build->pop_front();
+    string newLeft = left.substr(0, left.length()-1);
+    string newBegin = begin;
+    /**
+    * builds the left part without spaces
+    */
+    if (left[0] == ' ') {
+        newLeft = left.substr(1, left.length() - 1);
+    }
+    if (begin == "connectControlClient") {
+        string newSubLeft1 = "";
+        string newSubLeft2 = "";
+        auto end1 = newLeft.find(",");
+        newSubLeft1 = newLeft.substr(0, end1);
+        newSubLeft2 = newLeft.substr(end1+1,newLeft.length());
+        this->lex->push_front(newSubLeft2);
+        this->lex->push_front(newSubLeft1);
+    }
+    else {
+        this->lex->push_front(newLeft);
+    }
+    /**
+     * builds the begin part without spaces
+     */
+    // delete tabs
+    if (ifExists(begin, "\t")) {
+        newBegin = begin.substr(1, begin.length());
+        this->lex->push_front(newBegin);
+    }
+        // delete spaces
+    else if (ifExists(begin, " ")) {
+        std::string::iterator end_pos = std::remove(newBegin.begin(), newBegin.end(), ' ');
+        newBegin.erase(end_pos, newBegin.end());
+        this->lex->push_front(newBegin);
+    }
+        // in case there are no tabs, spaces at the begining
+    else {
+        this->lex->push_front(newBegin);
+    }
 }
 void Lexer::delimEquation(string s) {
     string delim = "=";
@@ -113,6 +187,9 @@ void Lexer::delimEquation(string s) {
     this->build->pop_front();
     string newLeft = left;
     string newBegin = begin;
+    /**
+     * builds the left part without spaces
+     */
     if (left[0] == ' ') {
         newLeft = left.substr(1, left.length());
         this->lex->push_front(newLeft);
@@ -120,11 +197,22 @@ void Lexer::delimEquation(string s) {
     else {
         this->lex->push_front(newLeft);
     }
+    /**
+     * pushes "=" in case of set variable
+     */
     this->lex->push_front("=");
+    /**
+     * builds the begin part
+     */
+     // delete tabs
     if (ifExists(begin, "\t")) {
         newBegin = begin.substr(1, begin.length());
+        if (newBegin[newBegin.length()-1] == ' ') {
+            newBegin = newBegin.substr(0,newBegin.length()-1);
+        }
         this->lex->push_front(newBegin);
     }
+    // delete spaces and saperate "var" from the variable
     else if (ifExists(begin, " ")) {
         if (ifExists(begin, "var")) {
             newBegin = begin.substr(3, begin.length());
@@ -139,6 +227,7 @@ void Lexer::delimEquation(string s) {
             this->lex->push_front(newBegin);
         }
     }
+    // in case there are no tabs, spaces at the begining
     else {
         this->lex->push_front(newBegin);
     }
@@ -147,6 +236,7 @@ void Lexer::delimCondition(string s, string con) {
     string begin = "";
     string left = "";
     auto start = 0U;
+    // the delimiter is given as a parameter.
     auto end = s.find(con);
     begin = s.substr(start, end);
     left = s.substr(end+con.length(), s.length());
@@ -195,6 +285,7 @@ void Lexer::delimiterSpace(string s) {
     begin = s.substr(start, end);
     left = s.substr(end+1, s.length());
     this -> build->pop_front();
+    // in cases of set variable
     if (ifExists(left, "=")) {
         auto startnew = 0U;
         auto endnew = left.find(" ");
@@ -253,9 +344,7 @@ void Lexer::delimiterArrowLeft(string s) {
     this -> build->push_front(left);
 }
 bool Lexer ::ifExists(string s, string c) {
-    /**
-     * checks if c is a substring of s
-     */
+    //checks if c is a substring of s
     if (s.find(c) != string::npos) {
         return true;
     }

@@ -183,6 +183,7 @@ void ParseCommand::parser(list<string>* LexeredCommandsList) {
             }
         }
     }//end of for loop
+    ParseCommand::getInstance()->setParsingFlag(true);
     OpenServerCommand::getInstance()->loopThread.join();
     ConnectCommand::getInstance()->loopThread.join();
 }
@@ -242,4 +243,12 @@ int ParseCommand::execute(list<string>::iterator it) {
 
 void Variable::setDirection(string newDirection) {
     this->direction = newDirection;
+}
+
+bool ParseCommand:: getParsingFlag() {
+    return this->parsingFlag;
+}
+
+void ParseCommand::setParsingFlag(bool b) {
+    this->parsingFlag = b;
 }

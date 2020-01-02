@@ -16,9 +16,10 @@
 
 using namespace std;
 static mutex mu;
+
 class Variable {
 private:
-    double value;
+    double value = 888888888;
     string sim;
     string direction; //gets -> or <-
 public:
@@ -40,6 +41,7 @@ public:
 
 class ParseCommand: public Command {
 private:
+    bool parsingFlag = false;
     map <string,Command*> commandMap;
     ParseCommand(){};
 public:
@@ -53,6 +55,10 @@ public:
     map <string,Command*> getMap() {
         return this->commandMap;
     };
+
+    bool getParsingFlag();
+
+    void setParsingFlag(bool b);
 };
 
 class OpenServerCommand: public Command {

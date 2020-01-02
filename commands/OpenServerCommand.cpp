@@ -43,7 +43,7 @@ void serverLoop() {
     //reading from client
     char buffer[1024] = {0};
     int counter = 0;
-    while (true) {
+    while (ParseCommand::getInstance()->getParsingFlag() == false) {
         int client_socket = s_client_socket;
         int valread = read(client_socket, buffer, 1024);
         stringstream bufferedValues(buffer);
