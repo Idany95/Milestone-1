@@ -125,7 +125,7 @@ class IfCommand: public ConditionParser {
 };
 class LoopCommand: public ConditionParser {
 protected:
-    int commandCounter;
+    int commandCounter = 0;
     int execute(list<string>::iterator it);
     bool condition(string var1, string con, string var2);
 };

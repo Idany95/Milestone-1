@@ -195,7 +195,7 @@ bool Command::checkIfNumber(string s) {
 };
 
 double Command::calculateValue(string strValue){
-    cout << strValue << endl;
+    //cout << strValue << endl;
     vector <Var*>* vars = new vector<Var*>();
     Interpreter* i = new Interpreter();
     //inserting all Variables to a vector
@@ -207,7 +207,7 @@ double Command::calculateValue(string strValue){
     try {
         Expression* e = i->interpret(strValue);
         double value = e->calculate();
-        cout << value << endl;
+        //cout << value << endl;
         return value;
     }
     catch(...) {

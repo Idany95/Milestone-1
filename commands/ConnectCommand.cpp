@@ -30,13 +30,9 @@ int conectClient(string ip, int port) {
     } else {
         std::cout<<"Hello message sent to server" <<std::endl;
     }
-    cout << "In lock" << endl;
-    int counterr = 0;
     while (true) {
         mu.lock();
         if (!DefineVarCommand::getInstance()->getQueue()->empty()) {
-            counterr++;
-            //cout << "queue size: " << counterr << endl;
             Variable* currentVariable = DefineVarCommand::getInstance()->getQueue()->front();
             DefineVarCommand::getInstance()->getQueue()->pop();
             string simPath = currentVariable->getSim();
@@ -56,8 +52,6 @@ int conectClient(string ip, int port) {
 int ConnectCommand::execute(list<string>::iterator it) {
     string ip = (*it).substr(1,(*it).length()-2);
     string port = *(++it);
-    cout << "connectCommand: ";
-    cout << port << endl;
     ConnectCommand::getInstance()->loopThread = thread(conectClient,ip,calculateValue(port));
     //client_thread(conectClient,ip,calculateValue(port));
     //client_thread.join();

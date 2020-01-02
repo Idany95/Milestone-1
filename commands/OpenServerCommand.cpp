@@ -69,8 +69,6 @@ void serverLoop() {
 }
 int OpenServerCommand::execute(list<string>::iterator it) {
     string port = *it;
-    cout << "serverCommand: ";
-    cout << port << endl;
     thread server_thread(openServer, calculateValue(port));
     server_thread.join();
     //thread server_loop_thread(serverLoop);

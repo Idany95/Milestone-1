@@ -2,6 +2,7 @@
 #include "../interpreter/ex1.h"
 
 int LoopCommand::execute(list<string>::iterator it) {
+    commandCounter = 0;
     string varName1 = *it;
     string con = *(++it);
     string varName2 = *(++it);
@@ -28,11 +29,8 @@ int LoopCommand::execute(list<string>::iterator it) {
             //current string isn't a commands but a variable, we'll update it
         } else {
             Command* setVariable = new SetVariableCommand();
-            cout << "new set done" << *it << endl;
-            mu.lock();
+            //cout << "execute setVariable " << *it << endl;
             int i = setVariable->execute(it);
-            mu.unlock();
-            cout << "execute set done" << endl;
             //move the iterator i steps forward
             while (i > 0) {
                 it++;
@@ -55,7 +53,6 @@ int LoopCommand::execute(list<string>::iterator it) {
             }
         }
     }
-
     return commandCounter + 4;
 }
 bool LoopCommand::condition(string var1, string con, string var2) {
