@@ -46,22 +46,12 @@ Add additional notes about how to deploy this on a live system
 
 * [Clion](http://www.dropwizard.io/1.0.2/docs/) - Our favorite IDE
 
-## Versioning
-
-This is version 1.0
-
 ## Authors
 
 * **Nili Alfia* - [niliya96](https://github.com/niliya96)
 
 * **Idan Yarchi* - [idany95](https://github.com/Idany95)
 
-## License
-
-This project is licensed under the 
-
 ## Acknowledgments
 
-* We'd like 
-* Inspiration
-* etc
+* We'd like to thank our families and friends for supporting us during the making of this project.
