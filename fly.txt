@@ -21,6 +21,7 @@ var aileron -> sim("/controls/flight/aileron")
 var elevator -> sim("/controls/flight/elevator")
 var alt <- sim("/instrumentation/altimeter/indicated-altitude-ft")
 var rpm <- sim("/engines/engine/rpm")
+var br -> sim("/controls/gear/brake-right")
 Print("waiting 2 minutes for gui")
 Sleep(35000)
 Print("let's start")
@@ -50,6 +51,9 @@ while alt < 1000 {
 	rudder = (h0 - heading)/80
 	aileron = -roll / 70
 	elevator = pitch / 50
+	br=1
+    Sleep(19)
+    br=0
 	Sleep(250)
 }
 Print("done")

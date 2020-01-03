@@ -1,29 +1,28 @@
 #include "Commands.h"
 
+/**
+ * This is SetVariableCommand class for set variable command
+ * @param it the iterator
+ * @return the number of jumps for the outside loop
+ */
 int SetVariableCommand::execute(list<string>::iterator it) {
     string varName = *it;
     string strValue = *(++(++it));
     double value;
+    // calculates the value of the variable
     value = calculateValue(strValue);
-    //find varSymbolTable on "DefineVarCommand" and update variable's value
-    //cout << varName << " is our varName " << endl;
-    //mu.lock();
     Variable* temp = DefineVarCommand::getInstance()->getVarSymbolTable()->find(varName)->second;
+    // updates the new value
     if (temp->getValue() != value) {
         temp->setValue(value);
-        //cout << value << " a" << endl;
         Variable* v = DefineVarCommand::getInstance()->getVarSymbolTable()->find(varName)->second;
-        //cout << " b" << endl;
         //check variable's direction
         if(v->getDirection() == "->") {
             DefineVarCommand::getInstance()->getQueue()->push(v);
         }
-        else{
+        else {
             cout << "didn't push " << varName << " to queue" << endl;
         }
     }
-    //mu.unlock();
-    //PUSHING DOESENT WORK
-    //cout << "queue in set variable" << DefineVarCommand::getInstance()->getQueue()->size() << endl;
     return 2;
 }

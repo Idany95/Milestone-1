@@ -10,8 +10,15 @@ int DefineVarCommand::execute(list<string>::iterator it) {
         simPath = (simPath).substr(1,simPath.length()-2);
         //inserting to Variable Symbol Table
         Variable* v = this->simSymbolTable->find(simPath)->second;
-        this->varSymbolTable->insert({varName, v});
-        v->setDirection(sign);
+        if (v == nullptr) {
+                Variable* newVariable = new Variable(direction,simPath);
+                this->varSymbolTable->insert({varName, newVariable});
+                this->simSymbolTable->insert({simPath, newVariable});
+        }
+        else {
+            this->varSymbolTable->insert({varName, v});
+            v->setDirection(sign);
+        }
         //we return 3, cause we went over 3 items in the list
         return 3;
     }

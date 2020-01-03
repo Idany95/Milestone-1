@@ -10,7 +10,18 @@ int LoopCommand::execute(list<string>::iterator it) {
     bool ifCondition = false;
     ifCondition = condition(varName1, con, varName2);
     ++it;
-    while (ifCondition && *it != "}") {
+    if (!ifCondition) {
+        cout << "i didn't went in loop" << endl;
+        while (*it != "}") {
+            it++;
+            commandCounter++;
+        }
+    }
+    while (ifCondition) {
+        if(*it == "}") {
+            ifCondition = condition(varName1, con, varName2);
+            continue;
+        }
         map<string,Command*>::iterator end = ParseCommand::getInstance()->getMap().end();
         //if current string is a commands
         if (ParseCommand::getInstance()->getMap().find(*it) != end) {

@@ -1,7 +1,14 @@
 #include <sstream>
 #include "Commands.h"
 #include "../lexer/Lexer.h"
+// global socket
 int s_client_socket;
+
+/**
+ * This is a callable for the thread of opening the server
+ * @param port the port to listen
+ * @return 0 if all the steps succeeded
+ */
 int openServer(int port) {
     //creates socket and checks if created
     int socketFD = socket(AF_INET, SOCK_STREAM, 0);
@@ -39,10 +46,17 @@ int openServer(int port) {
     s_client_socket = client_socket;
     return 0;
 }
+
+/**
+ * This is a callable for the thread of the sever loop
+ */
 void serverLoop() {
     //reading from client
     char buffer[1024] = {0};
     int counter = 0;
+    /**
+     * read variables of "generic small"
+     */
     while (ParseCommand::getInstance()->getParsingFlag() == false) {
         int client_socket = s_client_socket;
         int valread = read(client_socket, buffer, 1024);
@@ -64,15 +78,20 @@ void serverLoop() {
             counter++;
             mu.unlock();
         }
-        //std::cout << buffer << std::endl;
     }
 }
+
+/**
+ * Execute the command
+ * @param it the iterator
+ * @return the number of jumps for the outside loop
+ */
 int OpenServerCommand::execute(list<string>::iterator it) {
+    // the port to listen
     string port = *it;
+    // open new threads for open a server and do the server loop
     thread server_thread(openServer, calculateValue(port));
     server_thread.join();
-    //thread server_loop_thread(serverLoop);
     OpenServerCommand::getInstance()->loopThread = thread(serverLoop);
-    //server_loop_thread.join();
     return 0;
 }
