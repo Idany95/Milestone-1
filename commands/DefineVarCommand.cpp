@@ -1,9 +1,16 @@
 #include <sstream>
 #include "Commands.h"
-//DefineVarCommand* DefineVarCommand::theInstance = 0;
+
+/**
+ * Execute the command
+ * @param it the iterator
+ * @return the number of jumps for the outside loop
+ */
 int DefineVarCommand::execute(list<string>::iterator it) {
+    // variable name and sign
     string varName = *it;
     string sign = *(++it);
+    // a new variable
     if(sign == "->" || sign == "<-") {
         string direction = sign;
         string simPath = *(++(++it));
@@ -11,9 +18,9 @@ int DefineVarCommand::execute(list<string>::iterator it) {
         //inserting to Variable Symbol Table
         Variable* v = this->simSymbolTable->find(simPath)->second;
         if (v == nullptr) {
-                Variable* newVariable = new Variable(direction,simPath);
-                this->varSymbolTable->insert({varName, newVariable});
-                this->simSymbolTable->insert({simPath, newVariable});
+            Variable* newVariable = new Variable(direction,simPath);
+            this->varSymbolTable->insert({varName, newVariable});
+            this->simSymbolTable->insert({simPath, newVariable});
         }
         else {
             this->varSymbolTable->insert({varName, v});

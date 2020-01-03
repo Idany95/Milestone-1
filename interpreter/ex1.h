@@ -1,4 +1,3 @@
-
 #ifndef EX1_EX1_H
 #define EX1_EX1_H
 #include <string>
@@ -7,6 +6,10 @@
 #include <typeinfo>
 #include "Expression.h"
 #include <algorithm>
+
+/**
+ * Definition for all the classes that derived from expression, and interpreter class.
+ */
 class BinaryOperator: public Expression {
 protected:
     Expression* right;

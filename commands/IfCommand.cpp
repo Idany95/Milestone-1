@@ -7,6 +7,8 @@
  * @return the number of jumps for the outside loop
  */
 int IfCommand::execute(list<string>::iterator it) {
+    // initialize the global command counter to zero
+    commandCounter = 0;
     // checks if the condition is true (initialize to false)
     bool ifCorrect = false;
     // four first tokens of the condition

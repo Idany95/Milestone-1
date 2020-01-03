@@ -2,6 +2,10 @@
 #include "Commands.h"
 #include "../interpreter/ex1.h"
 
+/**
+ * This is the parser of the regular commands (not condition ones)
+ * @param LexeredCommandsList the lexer
+ */
 void ParseCommand::parser(list<string>* LexeredCommandsList) {
     //Initialize commands map
     this->commandMap.insert({"openDataServer",OpenServerCommand::getInstance()});
@@ -11,7 +15,9 @@ void ParseCommand::parser(list<string>* LexeredCommandsList) {
     this->commandMap.insert({"while",new LoopCommand()});
     this->commandMap.insert({"Print",new PrintCommand()});
     this->commandMap.insert({"Sleep",new SleepCommand()});
-    //Initialize simSymbolTable
+    /**
+     * Initialize simSymbolTable
+     */
     map<int, Variable *>* orderedMap = DefineVarCommand::getInstance()->getOrderedMap();
     map<string, Variable *>* simSymbolTable = DefineVarCommand::getInstance()->getSimSymbolTable();
     simSymbolTable->insert(
@@ -159,7 +165,7 @@ void ParseCommand::parser(list<string>* LexeredCommandsList) {
             {"/engines/engine/rpm",
              new Variable("<-", "/engines/engine/rpm")});
     orderedMap->insert({35, simSymbolTable->find("/engines/engine/rpm")->second});
-
+    // new iterator on the lexer
     list<string>::iterator it;
     for(it = LexeredCommandsList->begin(); it!=LexeredCommandsList->end(); ++it) {
         Command* tempC = nullptr;
@@ -188,6 +194,11 @@ void ParseCommand::parser(list<string>* LexeredCommandsList) {
     ConnectCommand::getInstance()->loopThread.join();
 }
 
+/**
+ * fuction that checks if a string represents a number
+ * @param s the string
+ * @return true if number, otherwise false
+ */
 bool Command::checkIfNumber(string s) {
     if(s[0] == '"') {
         return false;
@@ -195,12 +206,16 @@ bool Command::checkIfNumber(string s) {
     return true;
 };
 
+/**
+ * function that claculates the value of a given string
+ * @param strValue the string
+ * @return the numerical value
+ */
 double Command::calculateValue(string strValue){
-    //cout << strValue << endl;
     vector <Var*>* vars = new vector<Var*>();
+    // new interpreter (from ex1)
     Interpreter* i = new Interpreter();
     //inserting all Variables to a vector
-    //map<string, int>::iterator j;
     for (auto const& x: *DefineVarCommand::getInstance()->getVarSymbolTable()){
         vars->push_back(new Var(x.first, x.second->getValue()));
     }
@@ -216,39 +231,77 @@ double Command::calculateValue(string strValue){
     }
 }
 
+/**
+ * function that returns a value of a variable
+ * @return numerical value
+ */
 double Variable::getValue() {
     return this->value;
 }
 
+/**
+ * function that returns the direction of a variable
+ * @return -> or <-
+ */
 string Variable::getDirection() {
     return this->direction;
 }
 
+/**
+ * function that sets the value of a variable
+ * @param newValue the value to update
+ */
 void Variable::setValue(double newValue) {
     this->value = newValue;
 }
 
+/**
+ * function that updates the direction and sim
+ * @param newDirection <- or ->
+ * @param newSim the sim
+ */
 Variable::Variable(string newDirection, string newSim) {
     this->direction = newDirection;
     this->sim = newSim;
 }
 
+/**
+ * function that returns the sim of a variable
+ * @return the sim
+ */
 string Variable::getSim() {
     return this->sim;
 }
 
+/**
+ * function that executes the parser
+ * @param it the iterator
+ * @return 0 (with no use, just to operate the parser)
+ */
 int ParseCommand::execute(list<string>::iterator it) {
     return 0;
 }
 
+/**
+ * function that sets the direction of a variable
+ * @param newDirection -> or <-
+ */
 void Variable::setDirection(string newDirection) {
     this->direction = newDirection;
 }
 
+/**
+ * function that returns the parser flag. flag = true if the parser finished parsing
+ * @return true if the parser finished parsing
+ */
 bool ParseCommand:: getParsingFlag() {
     return this->parsingFlag;
 }
 
+/**
+ * function that sets the parser flag. flag = true if the parser finished parsing
+ * @return true if the parser finished parsing
+ */
 void ParseCommand::setParsingFlag(bool b) {
     this->parsingFlag = b;
 }

@@ -1,5 +1,11 @@
 #include "Commands.h"
 
+/**
+ * This is a callable for the thread of the conecting of the client
+ * @param port the port to listen
+ * @param ip the ip
+ * @return 0 if all the steps succeeded
+ */
 int conectClient(string ip, int port) {
     // creates a socket and checks if created
     int client_socket = socket(AF_INET, SOCK_STREAM, 0);
@@ -24,12 +30,15 @@ int conectClient(string ip, int port) {
         std::cout<<"Client is now connected to server" <<std::endl;
     }
     // we want to know if the client connected.
-    int is_sent = send(client_socket , "Hi from client" , strlen("Hi from client"), 0);
+    int is_sent = send(client_socket , "Hi from client\n" , strlen("Hi from client\n"), 0);
     if (is_sent == -1) {
         std::cout<<"Error sending message"<<std::endl;
     } else {
-        std::cout<<"Hello message sent to server" <<std::endl;
+        std::cout<<"Hello message sent to server\n" <<std::endl;
     }
+    /**
+     * Update the values of the variables of the simulator
+     */
     while (ParseCommand::getInstance()->getParsingFlag() == false) {
         mu.lock();
         if (!DefineVarCommand::getInstance()->getQueue()->empty()) {
@@ -37,6 +46,7 @@ int conectClient(string ip, int port) {
             DefineVarCommand::getInstance()->getQueue()->pop();
             string simPath = currentVariable->getSim();
             string value = to_string(currentVariable->getValue());
+            // send format of the simulator
             string message = "set " + simPath + " " + value + "\r\n";
             char* messageSend = const_cast<char *>(message.c_str());
             int toSend = send(client_socket , messageSend , strlen(messageSend), 0);
@@ -49,11 +59,17 @@ int conectClient(string ip, int port) {
     close(client_socket);
     return 0;
 }
+
+/**
+ * Execute the command
+ * @param it the iterator
+ * @return the number of jumps for the outside loop
+ */
 int ConnectCommand::execute(list<string>::iterator it) {
+    // ip and port
     string ip = (*it).substr(1,(*it).length()-2);
     string port = *(++it);
+    // new thread for the client loop
     ConnectCommand::getInstance()->loopThread = thread(conectClient,ip,calculateValue(port));
-    //client_thread(conectClient,ip,calculateValue(port));
-    //client_thread.join();
     return 1;
 }

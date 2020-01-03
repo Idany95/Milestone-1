@@ -1,8 +1,13 @@
-//
-// Created by Idan Yarchi on 11/5/19.
-//
-
 #include "ex1.h"
+
+/**
+ * Implementation for all the classes that derived from expression, and interpreter class.
+ * the classes that derived from expression are expressions: unary and binary, and expression
+ * for the basic arithmetics: plus, minus, division, multiplication.
+ * the interpreter helps us to interprete complex mathematical expressions,
+ * consist of basic expressions.
+ */
+
 BinaryOperator::BinaryOperator(Expression *newLeft, Expression *newRight) {
     this->left = newLeft;
     this->right = newRight;

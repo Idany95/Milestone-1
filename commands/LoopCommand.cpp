@@ -1,23 +1,37 @@
 #include "Commands.h"
 #include "../interpreter/ex1.h"
 
+/**
+ * Execute the command
+ * @param it the iterator
+ * @return the number of jumps for the outside loop
+ */
 int LoopCommand::execute(list<string>::iterator it) {
+    // initialize the global command counter to zero
     commandCounter = 0;
+    // four first tokens of the condition
     string varName1 = *it;
     string con = *(++it);
     string varName2 = *(++it);
     string openScope = *(++it);
+    // checks if the condition is true (initialize to false)
     bool ifCondition = false;
+    /**
+     * Case that the condition is false at the first iteration
+     */
     ifCondition = condition(varName1, con, varName2);
     ++it;
     if (!ifCondition) {
-        cout << "i didn't went in loop" << endl;
         while (*it != "}") {
             it++;
             commandCounter++;
         }
     }
+    /**
+     * Case true at the first iteration
+     */
     while (ifCondition) {
+        // case of empty loop
         if(*it == "}") {
             ifCondition = condition(varName1, con, varName2);
             continue;
@@ -34,6 +48,7 @@ int LoopCommand::execute(list<string>::iterator it) {
                 i--;
                 commandCounter++;
             }
+            // case sleep and print
             if (i == 0) {
                 commandCounter++;
             }
@@ -49,8 +64,13 @@ int LoopCommand::execute(list<string>::iterator it) {
                 commandCounter++;
             }
         }
+        // go to the next line
         it++;
         commandCounter++;
+        /**
+         * if the iteration ended, check the condition again and takes the iterator to
+         * the begining of the loop
+         */
         if (*it == "}") {
             ifCondition = condition(varName1, con, varName2);
             if (ifCondition) {
@@ -66,11 +86,15 @@ int LoopCommand::execute(list<string>::iterator it) {
     }
     return commandCounter + 4;
 }
+
+/**
+ * A function that checks the condition
+ * @param var1 the first operand
+ * @param con the condition
+ * @param var2 the second operand
+ * @return true if the condition is true, false otherwise
+ */
 bool LoopCommand::condition(string var1, string con, string var2) {
-    /**cout << "loopCommand: ";
-    cout << var1 << endl;
-    cout << "loopCommand: ";
-    cout << var2 << endl;**/
     double varVal1 = this->calculateValue(var1);
     double varVal2 = this->calculateValue(var2);
     if (con.compare("==") == 0) {
