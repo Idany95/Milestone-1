@@ -1,7 +1,7 @@
 # Milestone-1
 Advanced Programming 1
 
-This project is a code interpreter that allows us to control remotely a flight simulator
+This project is a code interpreter that allows us to remotely control a flight simulator
 
 ## Getting Started
 
