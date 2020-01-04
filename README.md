@@ -14,8 +14,9 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 ```
-Flightgear - Download it from Ubuntu Software application. make sure to copy generic_smalls.xml to protocol folder, under the installation folder 
+Flightgear - Download it from Ubuntu Software application. 
 ```
+make sure to copy generic_smalls.xml to protocol folder, under the installation folder 
  
 ## Running the tests
 
@@ -34,11 +35,25 @@ g++ -std=c++14 */*.cpp *.cpp -Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic
 ### How to edit "fly.txt"
 
 Our interpreter supports the following commands:
-####Define Variable command:
+
+Open Server Command
+This command creates a local server for the simulator to connect to.
+```
+openDataServer(5400)
+```
+
+Connect Command
+This commands allows us to connect to the simulator as a client, and send it data.
+```
+connectControlClient("127.0.0.1",5402)
+```
+
+Define Variable command:
 ```
 var throttle -> sim("/controls/engines/current-engine/throttle")
 ```
 "->" means that assignment in "fly.txt" will affect the simulator
+
 "<-" means that the simulator will affect local Variables
 
 Creating variables for local usage is also an option:
@@ -46,9 +61,45 @@ Creating variables for local usage is also an option:
 var h0 = heading
 ```
 
-####If command:
+Set Variable Command:
 ```
-if variable
+throttle = 1
+```
+
+If command:
+```
+if alt >= 1000 {
+ *DO WHATEVER'S IN HERE*
+}
+```
+
+Loop Command
+```
+while autostart == 1 {
+ *DO WHATEVER'S IN HERE*
+}
+```
+
+Print Command
+```
+Print("Hello World") //Will print the string Hello World
+```
+or
+```
+Print(alt) //Will print the numerical value of the variable var
+```
+
+Sleep Command
+```
+Sleep(500) //Will make the program go to sleep for 500ms
+```
+
+And one last special feature:
+All parameters can be assigned as arthmetical expression (besides strings like "127.0.0.1
+"). For example:
+```
+Sleep((300 + 200) / 5)
+warp = (alt + 1800) * 2
 ```
 
 ### Break down into end to end tests
