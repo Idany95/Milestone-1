@@ -36,19 +36,21 @@ g++ -std=c++14 */*.cpp *.cpp -Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic
 
 Our interpreter supports the following commands:
 
-Open Server Command
+- Open Server Command:
+
 This command creates a local server for the simulator to connect to.
 ```
 openDataServer(5400)
 ```
 
-Connect Command
+- Connect Command:
+
 This commands allows us to connect to the simulator as a client, and send it data.
 ```
 connectControlClient("127.0.0.1",5402)
 ```
 
-Define Variable command:
+- Define Variable command:
 ```
 var throttle -> sim("/controls/engines/current-engine/throttle")
 ```
@@ -61,26 +63,26 @@ Creating variables for local usage is also an option:
 var h0 = heading
 ```
 
-Set Variable Command:
+- Set Variable Command:
 ```
 throttle = 1
 ```
 
-If command:
+- If command:
 ```
 if alt >= 1000 {
  *DO WHATEVER'S IN HERE*
 }
 ```
 
-Loop Command
+- Loop Command:
 ```
 while autostart == 1 {
  *DO WHATEVER'S IN HERE*
 }
 ```
 
-Print Command
+- Print Command:
 ```
 Print("Hello World") //Will print the string Hello World
 ```
@@ -89,12 +91,13 @@ or
 Print(alt) //Will print the numerical value of the variable var
 ```
 
-Sleep Command
+- Sleep Command:
 ```
 Sleep(500) //Will make the program go to sleep for 500ms
 ```
 
-And one last special feature:
+- One last special feature:
+
 All parameters can be assigned as arthmetical expression (besides strings like "127.0.0.1
 "). For example:
 ```
