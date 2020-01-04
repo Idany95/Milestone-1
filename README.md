@@ -19,34 +19,57 @@ Flightgear - Download it from Ubuntu Software application. make sure to copy gen
  
 ## Running the tests
 
-Run the following code using your favorite IDE or terminal, using this:
+1. You can use the default code in "fly.txt" or edit it as you wish (see "How to edit "fly.txt" section)
+2. Compile the program with the following command (You could also use your favorite IDE):
 ```
-g++ -std=c++14 *.cpp -Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic -o a.out -pthread
+g++ -std=c++14 */*.cpp *.cpp -Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic -o a.out -pthread
+```
+3. Run it using the following command
+```
+./a.out "fly.txt"
+```
+4. Open "Flightgear" simulator, and hit "fly".
+5. Wait couple of minutes and see the plane in action!
+
+### How to edit "fly.txt"
+
+Our interpreter supports the following commands:
+####Define Variable command:
+```
+var throttle -> sim("/controls/engines/current-engine/throttle")
+```
+"->" means that assignment in "fly.txt" will affect the simulator
+"<-" means that the simulator will affect local Variables
+
+Creating variables for local usage is also an option:
+```
+var h0 = heading
+```
+
+####If command:
+```
+if variable
 ```
 
 ### Break down into end to end tests
 
-Explain what these tests test and why
+We tested the program with different scenarios. For example:
 
+Empty loops
 ```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
+while rpm <= 750 {
+}
 ```
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+Variables that wasn't set as one of the 36 variables in small_generics.xml
+```
+var br -> sim("/controls/gear/brake-right")
+br = 1
+```
 
 ## Built With
 
-* [Clion](http://www.dropwizard.io/1.0.2/docs/) - Our favorite IDE
+* [Clion](https://www.jetbrains.com/clion/) - Our favorite IDE
 
 ## Authors
 
