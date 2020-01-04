@@ -16,7 +16,7 @@ What things you need to install the software and how to install them
 ```
 Flightgear - Download it from Ubuntu Software application. 
 ```
-Make sure to copy generic_smalls.xml to protocol folder, under the installation folder.
+Make sure to copy generic_small.xml to protocol folder, under the installation folder.
  
 ## Running the tests
 
