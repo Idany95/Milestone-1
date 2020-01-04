@@ -29,6 +29,10 @@ public :
     void delimEquation(string s);
     void delimExpression(string s);
     bool ifExists(string c, string s);
+    ~Lexer() {
+        delete lex;
+        delete build;
+    };
     list<std::__cxx11::string> * getList();
 };
 #endif //EX3_LEXER_H

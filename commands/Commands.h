@@ -115,6 +115,11 @@ private:
     map <int,Variable*> *orderedMap = new map<int,Variable*>();
     queue <Variable*> *updateVariablesQueue = new queue<Variable*>();
     DefineVarCommand(){};
+    ~DefineVarCommand() {
+      delete varSymbolTable;
+      delete simSymbolTable;
+      delete orderedMap;
+    };
     static DefineVarCommand *theInstance;
 public:
     //using singeltn

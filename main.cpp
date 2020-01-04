@@ -12,5 +12,6 @@ int main(int argc, char* argv[]){
     Lexer* l = new Lexer();
     l->buildLexer(argv[1]);
     ParseCommand::getInstance()->parser(l->getList());
+    delete l;
     return 0;
 }

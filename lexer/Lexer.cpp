@@ -343,7 +343,7 @@ void Lexer::delimiterArrowLeft(string s) {
     this->build->push_front(arrow);
     this -> build->push_front(left);
 }
-bool Lexer ::ifExists(string s, string c) {
+bool Lexer::ifExists(string s, string c) {
     //checks if c is a substring of s
     if (s.find(c) != string::npos) {
         return true;
