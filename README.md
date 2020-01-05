@@ -29,7 +29,7 @@ g++ -std=c++14 */*.cpp *.cpp -Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic
 ```
 ./a.out "fly.txt"
 ```
-4. Open "Flightgear" simulator, and hit "fly.txt".
+4. Open "Flightgear" simulator, and hit "fly".
 5. Wait couple of minutes and see the plane in action!
 
 ### How to edit "fly.txt"
